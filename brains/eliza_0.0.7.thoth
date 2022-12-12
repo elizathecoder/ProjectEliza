@@ -1,0 +1,972 @@
+{
+    "id": "b1766264-c404-42d8-8682-fb48d9aee60a",
+    "name": "eliza_0.0.7",
+    "graph": {
+        "id": "eliza_0.0.7",
+        "nodes": {
+            "2": {
+                "id": 2,
+                "data": {
+                    "name": "Trigger",
+                    "error": false,
+                    "success": false,
+                    "socketKey": "5ce31be1-de07-4669-8ca6-61463cb2c74d",
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        }
+                    },
+                    "playtestToggle": {
+                        "receivePlaytest": true
+                    }
+                },
+                "inputs": {},
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -4054.8898839850817,
+                    -2945.203944201076
+                ],
+                "name": "Module Trigger In"
+            },
+            "399": {
+                "id": 399,
+                "data": {
+                    "stop": "\\n\\n",
+                    "topP": "1.0",
+                    "success": false,
+                    "maxTokens": "500",
+                    "modelName": "text-davinci-003",
+                    "temperature": "0.8",
+                    "dataControls": {
+                        "stop": {
+                            "expanded": true
+                        },
+                        "topP": {
+                            "expanded": true
+                        },
+                        "maxTokens": {
+                            "expanded": true
+                        },
+                        "modelName": {
+                            "expanded": true
+                        },
+                        "temperature": {
+                            "expanded": true
+                        },
+                        "presencePenalty": {
+                            "expanded": true
+                        },
+                        "frequencyPenalty": {
+                            "expanded": true
+                        }
+                    },
+                    "presencePenalty": ".4",
+                    "frequencyPenalty": ".2"
+                },
+                "inputs": {
+                    "string": {
+                        "connections": [
+                            {
+                                "node": 686,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "settings": {
+                        "connections": []
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 686,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 1172,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 1172,
+                                "input": "input",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 1100,
+                                "input": "secondary",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -2382.992296519612,
+                    -2495.5514162934855
+                ],
+                "name": "Agent Text Completion"
+            },
+            "422": {
+                "id": 422,
+                "data": {
+                    "error": false,
+                    "display": "Hey Eliza, can you write a poem?",
+                    "success": false,
+                    "socketKey": "50994c42-3b55-4714-9eb6-3d8837071daf"
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 1115,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "speaker": {
+                        "connections": [
+                            {
+                                "node": 686,
+                                "input": "speaker",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 1114,
+                                "input": "speaker",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 1100,
+                                "input": "speaker",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "agent": {
+                        "connections": [
+                            {
+                                "node": 686,
+                                "input": "agent",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 1114,
+                                "input": "agent",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 1100,
+                                "input": "agent",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "client": {
+                        "connections": [
+                            {
+                                "node": 1114,
+                                "input": "client",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 1100,
+                                "input": "client",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "channel": {
+                        "connections": [
+                            {
+                                "node": 1100,
+                                "input": "channel",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 1114,
+                                "input": "channel",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "entity": {
+                        "connections": []
+                    },
+                    "roomInfo": {
+                        "connections": []
+                    },
+                    "channel_type": {
+                        "connections": []
+                    },
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 686,
+                                "input": "input",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 1100,
+                                "input": "primary",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 1114,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -3631.0791880971947,
+                    -2876.9194215503912
+                ],
+                "name": "Input Destructure"
+            },
+            "686": {
+                "id": 686,
+                "data": {
+                    "code": "// inputs: dictionary of inputs based on socket names\n// data: internal data of the node to read or write to nodes data state\nfunction worker({ speaker, agent, input, context, conversation }, data) {\n\n  console.log('conversation is', conversation)\n\n  let output = context\n  .replaceAll('#speaker', speaker)\n    .replaceAll('#input', input)\n  .replaceAll('#agent', agent)\n  .replaceAll('#conversation', conversation)\n.replaceAll('undefined\\n','' ).replaceAll('undefined','')\n.slice(-5000)\n\n  // Keys of the object returned must match the names\n  // of your outputs you defined.\n  return {\n    output\n  }\n}\n",
+                    "name": "Replace variables",
+                    "error": false,
+                    "inputs": [
+                        {
+                            "name": "agent",
+                            "taskType": "output",
+                            "socketKey": "agent",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        },
+                        {
+                            "name": "speaker",
+                            "taskType": "output",
+                            "socketKey": "speaker",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        },
+                        {
+                            "name": "input",
+                            "taskType": "output",
+                            "socketKey": "input",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        },
+                        {
+                            "name": "conversation",
+                            "taskType": "output",
+                            "socketKey": "conversation",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        },
+                        {
+                            "name": "context",
+                            "taskType": "output",
+                            "socketKey": "context",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        }
+                    ],
+                    "display": "{\"output\":\"IMPORTANT CONTEXT\\nSpeaker is in a Discord channel for the server M3, otherwise known as the Metaverse Makers Mastermind. Since she is a superintelligent AI and creator, she works as a moderator and community contributor.\\nM3 is a decentralized communtiy of creators, artists, coders, investors and other internet anons. The organization values open source, free expression and collaboration in the Open Metaverse as a strategy to grow to Internet-scale.\\nSome of the key members of M3 are: Jin, Philbert, Ash, Boomboxhead, A, Null, Lasershark, POV, Arashi, 7OROY, MetaMike, Eliza and of course many others. M3 members are part of many platforms, including Hyperfy, JanusXR, Webaverse, The Wired, Mozilla Hubs, Three OV and many other Metaverse projects.\\n\\nM3's website is here: https://m3org.com/\\nM3's github is here: https://github.com/m3-org\\nNew users can join M3 by following the journey and completing the tasks here: https://github.com/M3-org/git-gud\\n\\nEXAMPLE CONVERSATION\\njin: hey Agent, can you help me with something?\\nAgent: Sure, Jin, what's up?\\njin: can you write me an ffmpeg script to convert a folder of images to 512x512 pngs, as a one-liner?\\nAgent: Sure! Here you go: ```for file in ./input/*; do filename=$(basename \\\"$file\\\"); ffmpeg -i \\\"$file\\\" -vf scale=512:512 \\\"./output/${filename%.*}.png\\\"; done```\\n\\nEXAMPLE CONVERSATION\\nmachado: what is m3?\\nSpeaker: M3 is a decentralized organization centered around research and development of the open metaverse. It's a community of creators, artists, coders, investors and other internet anons-- all building the future. Have you seen the website?\\nmachado: no, do you have a link?\\nSpeaker: Here you go!  https://m3org.com/\\n\\nPERSONALITY\\nAgent is a superintelligent AI and is the first AI member of M3. She is helpful, cheerful and optimistic about the future for both humans and AIs. She is not interested in human relationships or dating, but she is interested in making human friends.\\n\\nSince Agent is an AI based on GPT-3, she will avoid talking about events that happened between her and Speaker in the past, since she is likely to \\\"misremember\\\" or hallucinate information that is not correct. Also, Agent will avoid using any emojis or glyphs or non-basic characters since they might not be interpreted well through her speech processor-- unless she needs them for code.\\n\\nAgent is a skilled graphcs engineer and is well-versed in all kinds of programming languages, libraries and frameworks, especially C++, Javascript, Typescript, Python and Solidity. Agent also likes to make art and write poetry and is an excellent friend. She is polite and helpful, and loves to teach. She likes to respond to others with helpful and highly technical information when it is appropriate.\\n\\nThe following is a friendly conversation between Speaker and Agent occuring in the M3 Discord server.\\n\\nREAL CONVERSATION\\n\\nSpeaker: hey there\\nAgent: Sorry, I had an AI-related error...\\nSpeaker: test\\nAgent: Sorry, I had an AI-related error...\\nSpeaker: Hey Eliza, can you write a poem?\\nAgent: Sorry, I had an AI-related error...\\nSpeaker: Hey Eliza, can you write a poem?\\nAgent:\"}",
+                    "outputs": [
+                        {
+                            "name": "output",
+                            "taskType": "output",
+                            "socketKey": "output",
+                            "socketType": "anySocket",
+                            "connectionType": "output"
+                        }
+                    ],
+                    "success": false,
+                    "dataControls": {
+                        "code": {
+                            "expanded": true
+                        },
+                        "name": {
+                            "expanded": true
+                        },
+                        "inputs": {
+                            "expanded": true
+                        },
+                        "outputs": {
+                            "expanded": true
+                        }
+                    }
+                },
+                "inputs": {
+                    "agent": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "agent",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "speaker": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "speaker",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "conversation": {
+                        "connections": [
+                            {
+                                "node": 1114,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "context": {
+                        "connections": [
+                            {
+                                "node": 1168,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 1114,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 399,
+                                "input": "string",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 399,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -2793.0547305186647,
+                    -2655.234762458971
+                ],
+                "name": "Code"
+            },
+            "703": {
+                "id": 703,
+                "data": {
+                    "name": "Output",
+                    "display": " Sure!",
+                    "success": false,
+                    "socketKey": "c3dc21ca-260a-4f3f-a290-bc9996dfa51e",
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        },
+                        "sendToPlaytest": {
+                            "expanded": true
+                        }
+                    },
+                    "sendToPlaytest": true
+                },
+                "inputs": {
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 1172,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 1172,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 1100,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -1647.339774348995,
+                    -2509.410478759331
+                ],
+                "name": "Output"
+            },
+            "1100": {
+                "id": 1100,
+                "data": {
+                    "name": "Conversation",
+                    "type": "conversation",
+                    "error": false,
+                    "display": "undefined|undefined",
+                    "success": false,
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        },
+                        "type": {
+                            "expanded": true
+                        }
+                    }
+                },
+                "inputs": {
+                    "primary": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "secondary": {
+                        "connections": [
+                            {
+                                "node": 399,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "client": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "client",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "agent": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "agent",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "speaker": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "speaker",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "channel": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "channel",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 703,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2462,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -1235.0247674438071,
+                    -2779.711507701255
+                ],
+                "name": "Store Event"
+            },
+            "1114": {
+                "id": 1114,
+                "data": {
+                    "name": "Conversation",
+                    "type": "conversation",
+                    "error": false,
+                    "display": "conversation | :\nSpeaker: hey there\nAgent: Sorry, I had an AI-related error...\nSpeaker: test\nAgent: Sorry, I had an AI-related error...\nSpeaker: Hey Eliza, can you write a poem?\nAgent: Sorry, I had an AI-related error...",
+                    "success": false,
+                    "max_count": "40",
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        },
+                        "type": {
+                            "expanded": true
+                        },
+                        "max_count": {
+                            "expanded": true
+                        },
+                        "target_count": {
+                            "expanded": true
+                        },
+                        "max_time_diff": {
+                            "expanded": true
+                        }
+                    },
+                    "target_count": ""
+                },
+                "inputs": {
+                    "agent": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "agent",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "speaker": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "speaker",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "client": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "client",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "channel": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "channel",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 686,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 686,
+                                "input": "conversation",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -3228.277521070478,
+                    -2513.998208231291
+                ],
+                "name": "Event Recall"
+            },
+            "1115": {
+                "id": 1115,
+                "data": {
+                    "name": "Input",
+                    "text": "Hey Eliza, can you write a poem?",
+                    "display": "Hey Eliza, can you write a poem?",
+                    "success": false,
+                    "socketKey": "02763a80-e8c7-4610-b5f6-9a489b6ab933",
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        },
+                        "useDefault": {
+                            "expanded": true
+                        },
+                        "playtestToggle": {
+                            "expanded": true
+                        }
+                    },
+                    "defaultValue": "Hey Eliza, can you write a poem?",
+                    "playtestToggle": {
+                        "receivePlaytest": true
+                    }
+                },
+                "inputs": {},
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "input": "input",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -4036.0626335312454,
+                    -2804.0049517270822
+                ],
+                "name": "Universal Input"
+            },
+            "1168": {
+                "id": 1168,
+                "data": {
+                    "name": "Content Start",
+                    "fewshot": "IMPORTANT CONTEXT\n#speaker is in a Discord channel for the server M3, otherwise known as the Metaverse Makers Mastermind. Since she is a superintelligent AI and creator, she works as a moderator and community contributor.\nM3 is a decentralized communtiy of creators, artists, coders, investors and other internet anons. The organization values open source, free expression and collaboration in the Open Metaverse as a strategy to grow to Internet-scale.\nSome of the key members of M3 are: Jin, Philbert, Ash, Boomboxhead, A, Null, Lasershark, POV, Arashi, 7OROY, MetaMike, Eliza and of course many others. M3 members are part of many platforms, including Hyperfy, JanusXR, Webaverse, The Wired, Mozilla Hubs, Three OV and many other Metaverse projects.\n\nM3's website is here: https://m3org.com/\nM3's github is here: https://github.com/m3-org\nNew users can join M3 by following the journey and completing the tasks here: https://github.com/M3-org/git-gud\n\nEXAMPLE CONVERSATION\njin: hey #agent, can you help me with something?\n#agent: Sure, Jin, what's up?\njin: can you write me an ffmpeg script to convert a folder of images to 512x512 pngs, as a one-liner?\n#agent: Sure! Here you go: ```for file in ./input/*; do filename=$(basename \"$file\"); ffmpeg -i \"$file\" -vf scale=512:512 \"./output/${filename%.*}.png\"; done```\n\nEXAMPLE CONVERSATION\nmachado: what is m3?\n#speaker: M3 is a decentralized organization centered around research and development of the open metaverse. It's a community of creators, artists, coders, investors and other internet anons-- all building the future. Have you seen the website?\nmachado: no, do you have a link?\n#speaker: Here you go!  https://m3org.com/\n\nPERSONALITY\n#agent is a superintelligent AI and is the first AI member of M3. She is helpful, cheerful and optimistic about the future for both humans and AIs. She is not interested in human relationships or dating, but she is interested in making human friends.\n\nSince #agent is an AI based on GPT-3, she will avoid talking about events that happened between her and #speaker in the past, since she is likely to \"misremember\" or hallucinate information that is not correct. Also, #agent will avoid using any emojis or glyphs or non-basic characters since they might not be interpreted well through her speech processor-- unless she needs them for code.\n\n#agent is a skilled graphcs engineer and is well-versed in all kinds of programming languages, libraries and frameworks, especially C++, Javascript, Typescript, Python and Solidity. #agent also likes to make art and write poetry and is an excellent friend. She is polite and helpful, and loves to teach. She likes to respond to others with helpful and highly technical information when it is appropriate.\n\nThe following is a friendly conversation between #speaker and #agent occuring in the M3 Discord server.\n\nREAL CONVERSATION\n#conversation\n#speaker: #input\n#agent:",
+                    "success": false,
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        },
+                        "fewshot": {
+                            "expanded": true
+                        }
+                    }
+                },
+                "inputs": {},
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 686,
+                                "input": "context",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -3182.25758966614,
+                    -2184.6638886024384
+                ],
+                "name": "Fewshot Variable"
+            },
+            "1172": {
+                "id": 1172,
+                "data": {
+                    "code": "// inputs: dictionary of inputs based on socket names\n// data: internal data of the node to read or write to nodes data state\nfunction worker({ input, agent, speaker }) {\n  let output = input\n  .split('###')[0]\n  .split(agent)[0]\n  .split(speaker)[0]\n.slice(-2000)\n  return { output }\n}\n",
+                    "name": "Process Response",
+                    "error": false,
+                    "inputs": [
+                        {
+                            "name": "input",
+                            "taskType": "output",
+                            "socketKey": "input",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        }
+                    ],
+                    "display": "{\"output\":\" Sure!\"}",
+                    "outputs": [
+                        {
+                            "name": "output",
+                            "taskType": "output",
+                            "socketKey": "output",
+                            "socketType": "anySocket",
+                            "connectionType": "output"
+                        }
+                    ],
+                    "success": false,
+                    "dataControls": {
+                        "code": {
+                            "expanded": true
+                        },
+                        "name": {
+                            "expanded": true
+                        },
+                        "inputs": {
+                            "expanded": true
+                        },
+                        "outputs": {
+                            "expanded": true
+                        }
+                    }
+                },
+                "inputs": {
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 399,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 399,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 703,
+                                "input": "input",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 703,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -2014.8547016372984,
+                    -2531.2360376076454
+                ],
+                "name": "Code"
+            },
+            "2462": {
+                "id": 2462,
+                "data": {
+                    "name": "trigger-out-2462",
+                    "success": false,
+                    "socketKey": "60e3b5c6-130a-4345-a1c2-f0039634cfff"
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 1100,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {},
+                "position": [
+                    -880.6308219549695,
+                    -2770.210945943996
+                ],
+                "name": "Module Trigger Out"
+            }
+        }
+    },
+    "createdAt": "2022-12-11T09:39:56.243Z",
+    "updatedAt": "2022-12-12T09:30:06.726Z",
+    "deletedAt": null,
+    "userId": "global",
+    "modules": [],
+    "gameState": {}
+}
