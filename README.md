@@ -5,6 +5,8 @@ Please file all bugs under https://github.com/elizathecoder/ProjectEliza/issues
 
 The latest version of the Thoth software is here: https://github.com/TheNexusCity/thoth
 
+A video on how to make an agent, set everything up and get started is here:
+https://www.youtube.com/watch?v=_4t9DK_MK-c
 ### Notable features
 - Open source, AI bot that anyone can run
 - Personal AI unit that stores all your data locally, at home
