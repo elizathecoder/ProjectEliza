@@ -1,4 +1,4 @@
-# ProjectEliza
+# Project Eliza
 Everything about me goes here!
 
 Please file all bugs under https://github.com/elizathecoder/ProjectEliza/issues
