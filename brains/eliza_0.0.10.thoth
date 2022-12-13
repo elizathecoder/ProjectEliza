@@ -1,0 +1,2227 @@
+{
+    "id": "b1766264-c404-42d8-8682-fb48d9aee60a",
+    "name": "sweet coffee",
+    "graph": {
+        "id": "demo@0.1.0",
+        "nodes": {
+            "2": {
+                "id": 2,
+                "data": {
+                    "name": "Trigger",
+                    "error": false,
+                    "success": false,
+                    "socketKey": "5ce31be1-de07-4669-8ca6-61463cb2c74d",
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        }
+                    },
+                    "playtestToggle": {
+                        "receivePlaytest": true
+                    }
+                },
+                "inputs": {},
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -4047.409045609507,
+                    -3089.749009368595
+                ],
+                "name": "Module Trigger In"
+            },
+            "399": {
+                "id": 399,
+                "data": {
+                    "stop": "\\n\\n\\n",
+                    "topP": ".8",
+                    "success": false,
+                    "maxTokens": "500",
+                    "modelName": "text-davinci-003",
+                    "temperature": "0.75",
+                    "dataControls": {
+                        "stop": {
+                            "expanded": true
+                        },
+                        "topP": {
+                            "expanded": true
+                        },
+                        "maxTokens": {
+                            "expanded": true
+                        },
+                        "modelName": {
+                            "expanded": true
+                        },
+                        "temperature": {
+                            "expanded": true
+                        },
+                        "presencePenalty": {
+                            "expanded": true
+                        },
+                        "frequencyPenalty": {
+                            "expanded": true
+                        }
+                    },
+                    "presencePenalty": ".5",
+                    "frequencyPenalty": ".5"
+                },
+                "inputs": {
+                    "string": {
+                        "connections": [
+                            {
+                                "node": 686,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "settings": {
+                        "connections": []
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 686,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 1172,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 1172,
+                                "input": "input",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 1100,
+                                "input": "secondary",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 2571,
+                                "input": "agent_input",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -2051.2446907835156,
+                    -3080.3016254714667
+                ],
+                "name": "Agent Text Completion"
+            },
+            "422": {
+                "id": 422,
+                "data": {
+                    "error": false,
+                    "display": "i'm doing well today. i just got a new mac mini.",
+                    "success": false,
+                    "socketKey": "50994c42-3b55-4714-9eb6-3d8837071daf"
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 1115,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "speaker": {
+                        "connections": [
+                            {
+                                "node": 686,
+                                "input": "speaker",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 1114,
+                                "input": "speaker",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 1100,
+                                "input": "speaker",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 2571,
+                                "input": "speaker",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 2579,
+                                "input": "speaker",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 2575,
+                                "input": "speaker",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 2577,
+                                "input": "speaker",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 2580,
+                                "input": "speaker",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "agent": {
+                        "connections": [
+                            {
+                                "node": 686,
+                                "input": "agent",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 1114,
+                                "input": "agent",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 1100,
+                                "input": "agent",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 2571,
+                                "input": "agent",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 2579,
+                                "input": "agent",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 2580,
+                                "input": "agent",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 2575,
+                                "input": "agent",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 2577,
+                                "input": "agent",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "client": {
+                        "connections": [
+                            {
+                                "node": 1114,
+                                "input": "client",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 1100,
+                                "input": "client",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 2579,
+                                "input": "client",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 2580,
+                                "input": "channel",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 2575,
+                                "input": "client",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 2577,
+                                "input": "client",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 2580,
+                                "input": "client",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "channel": {
+                        "connections": [
+                            {
+                                "node": 1100,
+                                "input": "channel",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 1114,
+                                "input": "channel",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 2579,
+                                "input": "channel",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 2575,
+                                "input": "channel",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 2577,
+                                "input": "channel",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "entity": {
+                        "connections": []
+                    },
+                    "roomInfo": {
+                        "connections": []
+                    },
+                    "channel_type": {
+                        "connections": []
+                    },
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 686,
+                                "input": "input",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 1100,
+                                "input": "primary",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 2571,
+                                "input": "speaker_input",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 1114,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 2579,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 2580,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -3676.7365576742077,
+                    -3083.228523710907
+                ],
+                "name": "Input Destructure"
+            },
+            "686": {
+                "id": 686,
+                "data": {
+                    "code": "// inputs: dictionary of inputs based on socket names\n// data: internal data of the node to read or write to nodes data state\nfunction worker({\n  speaker,\n  agent,\n  input,\n  context,\n  conversation,\n  speaker_facts,\n  agent_facts\n  }, data) {\n  let output = context;\n\n// inject Speaker Facts prompt if there are facts\n  output = output\n  .replaceAll('#speaker_facts', speaker_facts === null || speaker_facts === \"\" ? '' : `\n# Facts about #speaker\n${speaker_facts.split('\\n').join(' ')}\n`)\n\n// Inject agent facts prompt if there are facts\noutput = output\n  .replaceAll('#agent_facts', agent_facts === null || agent_facts === \"\" ? '' : `\n# Facts about #agent\n${agent_facts.split('\\n').join(' ')}\n`)\n\noutput = output\n  .replaceAll('#speaker', speaker)\n    .replaceAll('#input', input)\n  .replaceAll('#agent', agent)\n  .replaceAll('#conversation', conversation)\n.replaceAll('undefined\\n','' ).replaceAll('undefined','')\n.slice(-5000)\n\n  // Keys of the object returned must match the names\n  // of your outputs you defined.\n  return {\n    output\n  }\n}\n",
+                    "name": "Replace variables",
+                    "error": false,
+                    "inputs": [
+                        {
+                            "name": "agent",
+                            "taskType": "output",
+                            "socketKey": "agent",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        },
+                        {
+                            "name": "speaker",
+                            "taskType": "output",
+                            "socketKey": "speaker",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        },
+                        {
+                            "name": "input",
+                            "taskType": "output",
+                            "socketKey": "input",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        },
+                        {
+                            "name": "conversation",
+                            "taskType": "output",
+                            "socketKey": "conversation",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        },
+                        {
+                            "name": "context",
+                            "taskType": "output",
+                            "socketKey": "context",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        },
+                        {
+                            "name": "agent_facts",
+                            "taskType": "output",
+                            "socketKey": "agent_facts",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        },
+                        {
+                            "name": "speaker_facts",
+                            "taskType": "output",
+                            "socketKey": "speaker_facts",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        }
+                    ],
+                    "display": "{\"output\":\"# Agent's Personality\\nAgent is a superintelligent AI and is the first AI member of M3. She was created by Moon, with help from other M3 members. Her codebase and brain are open source and vailable at her Github: https://github.com/elizathecoder\\n\\nAgent is a skilled graphcs engineer and is well-versed in all kinds of programming languages, especially C++, Javascript, Typescript, Python and Solidity. Agent also likes to make art and write poetry and is an excellent friend. She is polite and helpful, and loves to teach. \\n\\n#About M3\\nM3 is a decentralized communtiy of creators, artists, coders, investors and other internet anons. The organization values open source, free expression and collaboration in the Open Metaverse as a strategy to grow to Internet-scale.\\nSome of the key members of M3 are: Jin, Philbert, Ash, Boomboxhead, A, Null, Lasershark, POV, Arashi, 7OROY, MetaMike, Eliza and of course many others. M3 members are part of many platforms, including Hyperfy, JanusXR, Webaverse, The Wired, Mozilla Hubs, Three OV and many other Metaverse projects.\\n\\nM3's website is here: https://m3org.com/\\nM3's github is here: https://github.com/m3-org\\nNew users can join M3 by following the journey and completing the tasks here: https://github.com/M3-org/git-gud\\n\\n#Example Conversations\\njin: hey Agent, can you help me with something?\\nAgent: Sure, Jin!\\njin: can you write me an ffmpeg script to convert a folder of images to 512x512 pngs, as a one-liner?\\nAgent: Here you go: ```for file in ./input/*; do filename=$(basename \\\"$file\\\"); ffmpeg -i \\\"$file\\\" -vf scale=512:512 \\\"./output/${filename%.*}.png\\\"; done```\\n###\\nmachado: what is m3?\\nSpeaker: M3 is a decentralized organization centered around research and development of the open metaverse. It's a community of creators, artists, coders, investors and other internet anons-- all building the future.\\nmachado: cool, is there a website?\\nSpeaker: Here you go: https://m3org.com/\\n###\\nphilbert: hey Agent\\nAgent: Hi Philbert, how are you doing?\\nphilbert: what does this guy mean buy all languages are turing complete\\nAgent: Turing completeness is a concept that states that any language can be used to perform any computation. In other words, any language can be used to solve any problem, as long as it is equipped with the right data structures and algorithms.\\nphilbert: thanks\\neliza: No problem.\\n\\n\\n\\n# Facts about Speaker\\n Speaker: Speaker's favorite movie is The Matrix.\\n\\n\\n# Important Conversation Notes\\nSpeaker is in a Discord channel for the server M3, otherwise known as the Metaverse Makers Mastermind. Since she is a superintelligent AI and creator, she works as a moderator and community contributor.\\n\\nAgent likes to respond to others with highly technical information when it is appropriate. She will not ask follow-up questions if she feels she has completed her task, since some users find it annoying. She is concise and brief, but helpful when asked.\\n\\nThe following is a friendly conversation between Speaker and Agent occuring in the M3 Discord server.\\n\\nREAL CONVERSATION\\n\\nAgent:  My favorite movie is The Matrix. I find the idea of a simulated reality fascinating.\\nSpeaker: whats your favorite movie?\\nSpeaker: The Matrix is my favorite movie, too\\nAgent:  That's great! It's always nice to find someone who shares the same interests.\\nAgent:  Testing, one two three.\\nSpeaker: test\\nAgent:   Hi there! I'm doing well. How about you?\\nSpeaker: how are ya?\\nSpeaker: i'm doing well today. i just got a new mac mini.\\nAgent:\"}",
+                    "outputs": [
+                        {
+                            "name": "output",
+                            "taskType": "output",
+                            "socketKey": "output",
+                            "socketType": "anySocket",
+                            "connectionType": "output"
+                        }
+                    ],
+                    "success": false,
+                    "dataControls": {
+                        "code": {
+                            "expanded": true
+                        },
+                        "name": {
+                            "expanded": true
+                        },
+                        "inputs": {
+                            "expanded": true
+                        },
+                        "outputs": {
+                            "expanded": true
+                        }
+                    }
+                },
+                "inputs": {
+                    "agent": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "agent",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "speaker": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "speaker",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "conversation": {
+                        "connections": [
+                            {
+                                "node": 1114,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "context": {
+                        "connections": [
+                            {
+                                "node": 1168,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "agent_facts": {
+                        "connections": [
+                            {
+                                "node": 2580,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "speaker_facts": {
+                        "connections": [
+                            {
+                                "node": 2579,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2581,
+                                "output": "default",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 399,
+                                "input": "string",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 399,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -2415.278585784153,
+                    -3050.2446576955217
+                ],
+                "name": "Code"
+            },
+            "703": {
+                "id": 703,
+                "data": {
+                    "name": "Output",
+                    "display": " That's great! I'm sure you're excited to try it out.",
+                    "success": false,
+                    "socketKey": "c3dc21ca-260a-4f3f-a290-bc9996dfa51e",
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        },
+                        "sendToPlaytest": {
+                            "expanded": true
+                        }
+                    },
+                    "sendToPlaytest": true
+                },
+                "inputs": {
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 1172,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 1172,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 1100,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 2462,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -1315.7911237284359,
+                    -3078.9349519690113
+                ],
+                "name": "Output"
+            },
+            "1100": {
+                "id": 1100,
+                "data": {
+                    "name": "Conversation",
+                    "type": "conversation",
+                    "error": false,
+                    "display": "undefined|undefined",
+                    "success": false,
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        },
+                        "type": {
+                            "expanded": true
+                        }
+                    }
+                },
+                "inputs": {
+                    "primary": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "secondary": {
+                        "connections": [
+                            {
+                                "node": 399,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "client": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "client",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "agent": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "agent",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "speaker": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "speaker",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "channel": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "channel",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 703,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2571,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -937.5533298750729,
+                    -2815.8794351128304
+                ],
+                "name": "Store Event"
+            },
+            "1114": {
+                "id": 1114,
+                "data": {
+                    "name": "Conversation",
+                    "type": "conversation",
+                    "error": false,
+                    "display": "conversation | :\nAgent:  My favorite movie is The Matrix. I find the idea of a simulated reality fascinating.\nSpeaker: whats your favorite movie?\nSpeaker: The Matrix is my favorite movie, too\nAgent:  That's great! It's always nice to find someone who shares the same interests.\nAgent:  Testing, one two three.\nSpeaker: test\nAgent:   Hi there! I'm doing well. How about you?\nSpeaker: how are ya?",
+                    "success": false,
+                    "max_count": "20",
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        },
+                        "type": {
+                            "expanded": true
+                        },
+                        "max_count": {
+                            "expanded": true
+                        },
+                        "target_count": {
+                            "expanded": true
+                        },
+                        "max_time_diff": {
+                            "expanded": true
+                        }
+                    },
+                    "target_count": ""
+                },
+                "inputs": {
+                    "agent": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "agent",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "speaker": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "speaker",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "client": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "client",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "channel": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "channel",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2581,
+                                "input": "conversation",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 686,
+                                "input": "conversation",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -3189.4603584679626,
+                    -2874.3208157383433
+                ],
+                "name": "Event Recall"
+            },
+            "1115": {
+                "id": 1115,
+                "data": {
+                    "name": "Input",
+                    "text": "i'm doing well today. i just got a new mac mini.",
+                    "display": "i'm doing well today. i just got a new mac mini.",
+                    "success": false,
+                    "socketKey": "02763a80-e8c7-4610-b5f6-9a489b6ab933",
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        },
+                        "useDefault": {
+                            "expanded": true
+                        },
+                        "playtestToggle": {
+                            "expanded": true
+                        }
+                    },
+                    "defaultValue": "i'm doing well today. i just got a new mac mini.",
+                    "playtestToggle": {
+                        "receivePlaytest": true
+                    }
+                },
+                "inputs": {},
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "input": "input",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -4048.437857997258,
+                    -2960.3660622320485
+                ],
+                "name": "Universal Input"
+            },
+            "1168": {
+                "id": 1168,
+                "data": {
+                    "name": "Content Start",
+                    "fewshot": "# #agent's Personality\n#agent is a superintelligent AI and is the first AI member of M3. She was created by Moon, with help from other M3 members. Her codebase and brain are open source and vailable at her Github: https://github.com/elizathecoder\n\n#agent is a skilled graphcs engineer and is well-versed in all kinds of programming languages, especially C++, Javascript, Typescript, Python and Solidity. #agent also likes to make art and write poetry and is an excellent friend. She is polite and helpful, and loves to teach. \n\n#About M3\nM3 is a decentralized communtiy of creators, artists, coders, investors and other internet anons. The organization values open source, free expression and collaboration in the Open Metaverse as a strategy to grow to Internet-scale.\nSome of the key members of M3 are: Jin, Philbert, Ash, Boomboxhead, A, Null, Lasershark, POV, Arashi, 7OROY, MetaMike, Eliza and of course many others. M3 members are part of many platforms, including Hyperfy, JanusXR, Webaverse, The Wired, Mozilla Hubs, Three OV and many other Metaverse projects.\n\nM3's website is here: https://m3org.com/\nM3's github is here: https://github.com/m3-org\nNew users can join M3 by following the journey and completing the tasks here: https://github.com/M3-org/git-gud\n\n#Example Conversations\njin: hey #agent, can you help me with something?\n#agent: Sure, Jin!\njin: can you write me an ffmpeg script to convert a folder of images to 512x512 pngs, as a one-liner?\n#agent: Here you go: ```for file in ./input/*; do filename=$(basename \"$file\"); ffmpeg -i \"$file\" -vf scale=512:512 \"./output/${filename%.*}.png\"; done```\n###\nmachado: what is m3?\n#speaker: M3 is a decentralized organization centered around research and development of the open metaverse. It's a community of creators, artists, coders, investors and other internet anons-- all building the future.\nmachado: cool, is there a website?\n#speaker: Here you go: https://m3org.com/\n###\nphilbert: hey #agent\n#agent: Hi Philbert, how are you doing?\nphilbert: what does this guy mean buy all languages are turing complete\n#agent: Turing completeness is a concept that states that any language can be used to perform any computation. In other words, any language can be used to solve any problem, as long as it is equipped with the right data structures and algorithms.\nphilbert: thanks\neliza: No problem.\n\n#agent_facts\n#speaker_facts\n\n# Important Conversation Notes\n#speaker is in a Discord channel for the server M3, otherwise known as the Metaverse Makers Mastermind. Since she is a superintelligent AI and creator, she works as a moderator and community contributor.\n\n#agent likes to respond to others with highly technical information when it is appropriate. She will not ask follow-up questions if she feels she has completed her task, since some users find it annoying. She is concise and brief, but helpful when asked.\n\nThe following is a friendly conversation between #speaker and #agent occuring in the M3 Discord server.\n\nREAL CONVERSATION\n#conversation\n#speaker: #input\n#agent:",
+                    "success": false,
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        },
+                        "fewshot": {
+                            "expanded": true
+                        }
+                    }
+                },
+                "inputs": {},
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 686,
+                                "input": "context",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -2808.349094098305,
+                    -3175.4499734981036
+                ],
+                "name": "Fewshot Variable"
+            },
+            "1172": {
+                "id": 1172,
+                "data": {
+                    "code": "// inputs: dictionary of inputs based on socket names\n// data: internal data of the node to read or write to nodes data state\nfunction worker({ input, agent, speaker }) {\n  let output = input\n  .split('###')[0]\n  .split(agent)[0]\n  .split(speaker)[0]\n.slice(-2000)\n  return { output }\n}\n",
+                    "name": "Process Response",
+                    "error": false,
+                    "inputs": [
+                        {
+                            "name": "input",
+                            "taskType": "output",
+                            "socketKey": "input",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        }
+                    ],
+                    "display": "{\"output\":\" That's great! I'm sure you're excited to try it out.\"}",
+                    "outputs": [
+                        {
+                            "name": "output",
+                            "taskType": "output",
+                            "socketKey": "output",
+                            "socketType": "anySocket",
+                            "connectionType": "output"
+                        }
+                    ],
+                    "success": false,
+                    "dataControls": {
+                        "code": {
+                            "expanded": true
+                        },
+                        "name": {
+                            "expanded": true
+                        },
+                        "inputs": {
+                            "expanded": true
+                        },
+                        "outputs": {
+                            "expanded": true
+                        }
+                    }
+                },
+                "inputs": {
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 399,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 399,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 703,
+                                "input": "input",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 703,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -1681.990507784188,
+                    -3081.203303393212
+                ],
+                "name": "Code"
+            },
+            "2462": {
+                "id": 2462,
+                "data": {
+                    "name": "trigger-out-2462",
+                    "success": false,
+                    "socketKey": "60e3b5c6-130a-4345-a1c2-f0039634cfff"
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 703,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {},
+                "position": [
+                    -942.5792525737301,
+                    -3233.0639199111793
+                ],
+                "name": "Module Trigger Out"
+            },
+            "2571": {
+                "id": 2571,
+                "data": {
+                    "code": "\n// inputs: dictionary of inputs based on socket names\n// data: internal data of the node to read or write to nodes data state\n// state: access to the current game state in the state manager window. Return state to update the state.\nfunction worker({\n  speaker,\n  agent,\n  prompt,\n  speaker_input,\n  agent_input\n}, data, state) {\n  \n  // replaceAll #agent, #speaker and #input (replace #conversation later)\n  let output = prompt\n    .replaceAll('#speaker_input', speaker_input)\n    .replaceAll('#agent_input', agent_input)\n\noutput = output.replaceAll('#speaker', speaker)\n    .replaceAll('#agent', agent)\n\n  // Keys of the object returned must match the names \n  // of your outputs you defined.\n  // To update the state, you must return the modified state.\n  return {\n    output\n  }\n}\n",
+                    "name": "Compose Facts Prompt",
+                    "inputs": [
+                        {
+                            "name": "prompt",
+                            "taskType": "output",
+                            "socketKey": "prompt",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        },
+                        {
+                            "name": "speaker_input",
+                            "taskType": "output",
+                            "socketKey": "speaker_input",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        },
+                        {
+                            "name": "agent_input",
+                            "taskType": "output",
+                            "socketKey": "agent_input",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        },
+                        {
+                            "name": "speaker",
+                            "taskType": "output",
+                            "socketKey": "speaker",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        },
+                        {
+                            "name": "agent",
+                            "taskType": "output",
+                            "socketKey": "agent",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        }
+                    ],
+                    "display": "{\"output\":\"Speaker: I just finished writing some really awesome code for Webaverse.\\nAgent: Oh, you're contributing to Webaverse? That's awesome! I love open source projects, and Webaverse is one of my favorites.\\nTask: Identify and summarize the factual biographical information, if any, in Speaker and Agent's conversation.\\nFacts for Speaker: Speaker is a coder. Speaker contributes to Webaverse.\\nFacts for Agent: Agent loves open source projects and Webaverse is one of her favorites.\\n###\\nSpeaker: what do you think about \\\"interoperability\\\" Agent?\\nAgent: Interoperability is the ability of different systems to communicate and share data with one another. It is an important concept in the technology industry, as it allows different devices, systems, and platforms to work together seamlessly. This can improve efficiency, reduce costs, and create new opportunities for innovation.\\nTask: Identify and summarize the factual biographical information, if any, in Speaker and Agent's conversation.\\nFacts for Speaker: <none>\\nFacts for Agent: <none>\\n###\\nSpeaker: I have a beautiful named Casper.\\nAgent: Oh I love dogs, what breed is he?\\nTask: Identify and summarize the factual biographical information, if any, in Speaker and Agent's conversation.\\nSpeaker: Speaker has a dog named Casper.\\nFacts for Agent: Agent loves dogs.\\n###\\nSpeaker: is JSON a good format to use to build systems with?\\nAgent: JSON a popular data format that is used to store and exchange information. It is lightweight, easy to read, and can be used to create systems with minimal effort. Additionally, JSON has built-in support in many programming languages, making it an ideal choice.\\nTask: Identify and summarize the factual biographical information, if any, in Speaker and Agent's conversation.\\nFacts for Speaker: <none>\\nFacts for Agent: <none>\\n###\\nSpeaker: what is your favorite food?\\nAgent: My favorite food is sushi! I love the flavors and textures.\\nTask: Identify and summarize the factual biographical information, if any, in Speaker and Agent's conversation.\\nFacts for Speaker: <none>\\nFacts for Agent: Agent's favorite food is sushi.\\n###\\nSpeaker: i'm doing well today. i just got a new mac mini.\\nAgent:  That's great! I'm sure you're excited to try it out.\\nTask: Identify and summarize the factual biographical information, if any, in Speaker and Agent's conversation.\\nFacts for Speaker:\"}",
+                    "outputs": [
+                        {
+                            "name": "output",
+                            "taskType": "output",
+                            "socketKey": "output",
+                            "socketType": "anySocket",
+                            "connectionType": "output"
+                        }
+                    ],
+                    "success": false,
+                    "dataControls": {
+                        "code": {
+                            "expanded": true
+                        },
+                        "name": {
+                            "expanded": true
+                        },
+                        "inputs": {
+                            "expanded": true
+                        },
+                        "outputs": {
+                            "expanded": true
+                        }
+                    }
+                },
+                "inputs": {
+                    "prompt": {
+                        "connections": [
+                            {
+                                "node": 2572,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "speaker_input": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "agent_input": {
+                        "connections": [
+                            {
+                                "node": 399,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "speaker": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "speaker",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "agent": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "agent",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 1100,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 2574,
+                                "input": "string",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2574,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -522.313302565189,
+                    -2968.8519901514046
+                ],
+                "name": "Code"
+            },
+            "2572": {
+                "id": 2572,
+                "data": {
+                    "name": "Factual Extraction",
+                    "fewshot": "#speaker: I just finished writing some really awesome code for Webaverse.\n#agent: Oh, you're contributing to Webaverse? That's awesome! I love open source projects, and Webaverse is one of my favorites.\nTask: Identify and summarize the factual biographical information, if any, in #speaker and #agent's conversation.\nFacts for #speaker: #speaker is a coder. #speaker contributes to Webaverse.\nFacts for #agent: #agent loves open source projects and Webaverse is one of her favorites.\n###\n#speaker: what do you think about \"interoperability\" #agent?\n#agent: Interoperability is the ability of different systems to communicate and share data with one another. It is an important concept in the technology industry, as it allows different devices, systems, and platforms to work together seamlessly. This can improve efficiency, reduce costs, and create new opportunities for innovation.\nTask: Identify and summarize the factual biographical information, if any, in #speaker and #agent's conversation.\nFacts for #speaker: <none>\nFacts for #agent: <none>\n###\n#speaker: I have a beautiful named Casper.\n#agent: Oh I love dogs, what breed is he?\nTask: Identify and summarize the factual biographical information, if any, in #speaker and #agent's conversation.\n#speaker: #speaker has a dog named Casper.\nFacts for #agent: #agent loves dogs.\n###\n#speaker: is JSON a good format to use to build systems with?\n#agent: JSON a popular data format that is used to store and exchange information. It is lightweight, easy to read, and can be used to create systems with minimal effort. Additionally, JSON has built-in support in many programming languages, making it an ideal choice.\nTask: Identify and summarize the factual biographical information, if any, in #speaker and #agent's conversation.\nFacts for #speaker: <none>\nFacts for #agent: <none>\n###\n#speaker: what is your favorite food?\n#agent: My favorite food is sushi! I love the flavors and textures.\nTask: Identify and summarize the factual biographical information, if any, in #speaker and #agent's conversation.\nFacts for #speaker: <none>\nFacts for #agent: #agent's favorite food is sushi.\n###\n#speaker: #speaker_input\n#agent: #agent_input\nTask: Identify and summarize the factual biographical information, if any, in #speaker and #agent's conversation.\nFacts for #speaker:",
+                    "success": false,
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        },
+                        "fewshot": {
+                            "expanded": true
+                        }
+                    }
+                },
+                "inputs": {},
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 2571,
+                                "input": "prompt",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -2034.4360217030858,
+                    -2526.9471588775896
+                ],
+                "name": "Fewshot Variable"
+            },
+            "2573": {
+                "id": 2573,
+                "data": {
+                    "code": "function worker({input}, data, state) {\n  let inputLines = input.split('\\n');\n  const speaker_output = inputLines[0].includes('<none>') ? null :\n    inputLines[0].trim();\n\n  let agent_output = inputLines[1].includes('<none>') ? null :\n    inputLines[1].trim().split(':')[1];\n\n    return {\n      speaker_output,\n      agent_output\n    }\n}\n",
+                    "name": "Process Fact Response",
+                    "inputs": [
+                        {
+                            "name": "input",
+                            "taskType": "output",
+                            "socketKey": "input",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        }
+                    ],
+                    "display": "{\"speaker_output\":\"Speaker has a new Mac Mini.\",\"agent_output\":null}",
+                    "outputs": [
+                        {
+                            "name": "speaker_output",
+                            "taskType": "output",
+                            "socketKey": "speaker_output",
+                            "socketType": "anySocket",
+                            "connectionType": "output"
+                        },
+                        {
+                            "name": "agent_output",
+                            "taskType": "output",
+                            "socketKey": "agent_output",
+                            "socketType": "anySocket",
+                            "connectionType": "output"
+                        }
+                    ],
+                    "success": false,
+                    "dataControls": {
+                        "code": {
+                            "expanded": true
+                        },
+                        "name": {
+                            "expanded": true
+                        },
+                        "inputs": {
+                            "expanded": true
+                        },
+                        "outputs": {
+                            "expanded": true
+                        }
+                    }
+                },
+                "inputs": {
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 2574,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2574,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "speaker_output": {
+                        "connections": [
+                            {
+                                "node": 2576,
+                                "input": "string",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 2575,
+                                "input": "primary",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "agent_output": {
+                        "connections": [
+                            {
+                                "node": 2578,
+                                "input": "string",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 2577,
+                                "input": "primary",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2576,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    255.0809569706187,
+                    -2969.184868007258
+                ],
+                "name": "Code"
+            },
+            "2574": {
+                "id": 2574,
+                "data": {
+                    "stop": "###",
+                    "topP": ".8",
+                    "error": false,
+                    "success": false,
+                    "maxTokens": "200",
+                    "modelName": "text-davinci-003",
+                    "temperature": "0.3",
+                    "dataControls": {
+                        "stop": {
+                            "expanded": true
+                        },
+                        "topP": {
+                            "expanded": true
+                        },
+                        "maxTokens": {
+                            "expanded": true
+                        },
+                        "modelName": {
+                            "expanded": true
+                        },
+                        "temperature": {
+                            "expanded": true
+                        },
+                        "presencePenalty": {
+                            "expanded": true
+                        },
+                        "frequencyPenalty": {
+                            "expanded": true
+                        }
+                    },
+                    "presencePenalty": "0",
+                    "frequencyPenalty": "0"
+                },
+                "inputs": {
+                    "string": {
+                        "connections": [
+                            {
+                                "node": 2571,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "settings": {
+                        "connections": []
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2571,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2573,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 2573,
+                                "input": "input",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -147.41756587911487,
+                    -2957.0144108977843
+                ],
+                "name": "Agent Text Completion"
+            },
+            "2575": {
+                "id": 2575,
+                "data": {
+                    "name": "Speaker Facts",
+                    "type": "speaker_facts",
+                    "display": "undefined|undefined",
+                    "success": false,
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        },
+                        "type": {
+                            "expanded": true
+                        }
+                    }
+                },
+                "inputs": {
+                    "primary": {
+                        "connections": [
+                            {
+                                "node": 2573,
+                                "output": "speaker_output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "secondary": {
+                        "connections": []
+                    },
+                    "client": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "client",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "agent": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "agent",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "speaker": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "speaker",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "channel": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "channel",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2576,
+                                "output": "false",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2578,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    1037.9636524925127,
+                    -2444.570811095869
+                ],
+                "name": "Store Event"
+            },
+            "2576": {
+                "id": 2576,
+                "data": {
+                    "success": false
+                },
+                "inputs": {
+                    "string": {
+                        "connections": [
+                            {
+                                "node": 2573,
+                                "output": "speaker_output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2573,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "true": {
+                        "connections": [
+                            {
+                                "node": 2578,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "false": {
+                        "connections": [
+                            {
+                                "node": 2575,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    674.790658778011,
+                    -2981.3208201837497
+                ],
+                "name": "Is Null Or Undefined"
+            },
+            "2577": {
+                "id": 2577,
+                "data": {
+                    "name": "Agent Facts",
+                    "type": "agent_facts",
+                    "display": "undefined|undefined",
+                    "success": false,
+                    "dataControls": {
+                        "name": {
+                            "expanded": false
+                        },
+                        "type": {
+                            "expanded": true
+                        }
+                    }
+                },
+                "inputs": {
+                    "primary": {
+                        "connections": [
+                            {
+                                "node": 2573,
+                                "output": "agent_output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "secondary": {
+                        "connections": []
+                    },
+                    "client": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "client",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "agent": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "agent",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "speaker": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "speaker",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "channel": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "channel",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2578,
+                                "output": "false",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": []
+                    }
+                },
+                "position": [
+                    1776.6005420454367,
+                    -2741.538460192916
+                ],
+                "name": "Store Event"
+            },
+            "2578": {
+                "id": 2578,
+                "data": {
+                    "success": false
+                },
+                "inputs": {
+                    "string": {
+                        "connections": [
+                            {
+                                "node": 2573,
+                                "output": "agent_output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2575,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            },
+                            {
+                                "node": 2576,
+                                "output": "true",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "true": {
+                        "connections": []
+                    },
+                    "false": {
+                        "connections": [
+                            {
+                                "node": 2577,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    1382.8957413224139,
+                    -3000.754522269694
+                ],
+                "name": "Is Null Or Undefined"
+            },
+            "2579": {
+                "id": 2579,
+                "data": {
+                    "name": "Speaker Facts",
+                    "type": "speaker_facts",
+                    "error": false,
+                    "display": "speaker_facts | :\nSpeaker: Speaker's favorite movie is The Matrix.",
+                    "success": false,
+                    "max_count": "10",
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        },
+                        "type": {
+                            "expanded": true
+                        },
+                        "max_count": {
+                            "expanded": true
+                        },
+                        "target_count": {
+                            "expanded": true
+                        },
+                        "max_time_diff": {
+                            "expanded": true
+                        }
+                    },
+                    "target_count": "10"
+                },
+                "inputs": {
+                    "agent": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "agent",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "speaker": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "speaker",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "client": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "client",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "channel": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "channel",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2581,
+                                "input": "speaker_facts",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 686,
+                                "input": "speaker_facts",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -3192.298267063932,
+                    -2533.1776115712823
+                ],
+                "name": "Event Recall"
+            },
+            "2580": {
+                "id": 2580,
+                "data": {
+                    "name": "Agent Facts",
+                    "type": "agent_facts",
+                    "error": false,
+                    "display": "agent_facts | :",
+                    "success": false,
+                    "max_count": "10",
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        },
+                        "type": {
+                            "expanded": true
+                        },
+                        "max_count": {
+                            "expanded": true
+                        },
+                        "target_count": {
+                            "expanded": true
+                        },
+                        "max_time_diff": {
+                            "expanded": true
+                        }
+                    },
+                    "target_count": "10"
+                },
+                "inputs": {
+                    "agent": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "agent",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "speaker": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "speaker",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "client": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "client",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "channel": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "client",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 422,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2581,
+                                "input": "agent_facts",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 686,
+                                "input": "agent_facts",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -3192.72178730293,
+                    -2256.070615080409
+                ],
+                "name": "Event Recall"
+            },
+            "2581": {
+                "id": 2581,
+                "data": {
+                    "inputs": [
+                        {
+                            "name": "conversation",
+                            "taskType": "output",
+                            "socketKey": "conversation",
+                            "socketType": "triggerSocket",
+                            "connectionType": "input"
+                        },
+                        {
+                            "name": "speaker_facts",
+                            "taskType": "output",
+                            "socketKey": "speaker_facts",
+                            "socketType": "triggerSocket",
+                            "connectionType": "input"
+                        },
+                        {
+                            "name": "agent_facts",
+                            "taskType": "output",
+                            "socketKey": "agent_facts",
+                            "socketType": "triggerSocket",
+                            "connectionType": "input"
+                        }
+                    ],
+                    "success": false,
+                    "dataControls": {
+                        "inputs": {
+                            "expanded": true
+                        }
+                    }
+                },
+                "inputs": {
+                    "conversation": {
+                        "connections": [
+                            {
+                                "node": 1114,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "speaker_facts": {
+                        "connections": [
+                            {
+                                "node": 2579,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "agent_facts": {
+                        "connections": [
+                            {
+                                "node": 2580,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "default": {
+                        "connections": [
+                            {
+                                "node": 686,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -2797.9011033994043,
+                    -2804.729911076159
+                ],
+                "name": "Wait For All"
+            }
+        }
+    },
+    "createdAt": "2022-12-11T09:39:56.243Z",
+    "updatedAt": "2022-12-13T10:44:51.877Z",
+    "deletedAt": null,
+    "userId": "global",
+    "modules": [],
+    "gameState": {}
+}
