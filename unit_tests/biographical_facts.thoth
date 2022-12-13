@@ -1,0 +1,895 @@
+{
+    "id": "0de2e137-1669-451b-821e-752f5ae5053c",
+    "name": "biographical_facts",
+    "graph": {
+        "id": "biographical_facts",
+        "nodes": {
+            "124": {
+                "id": 124,
+                "data": {
+                    "name": "default",
+                    "success": false,
+                    "socketKey": "20c0d2db-1916-433f-88c6-69d3ae123217",
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        }
+                    },
+                    "playtestToggle": {
+                        "receivePlaytest": true
+                    }
+                },
+                "inputs": {},
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2531,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -1577.477000736369,
+                    307.5713048671602
+                ],
+                "name": "Module Trigger In"
+            },
+            "232": {
+                "id": 232,
+                "data": {
+                    "name": "Agent Input",
+                    "text": "Oh, that's awesome! I was thinking of minting a pet later.",
+                    "outputs": [],
+                    "success": false,
+                    "socketKey": "9d61118c-3c5a-4379-9dae-41965e56207f",
+                    "useDefault": true,
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        },
+                        "useDefault": {
+                            "expanded": true
+                        },
+                        "playtestToggle": {
+                            "expanded": true
+                        }
+                    },
+                    "defaultValue": "Oh, that's awesome! I was thinking of minting a pet later.",
+                    "playtestToggle": {
+                        "outputs": [],
+                        "receivePlaytest": false
+                    }
+                },
+                "inputs": {},
+                "outputs": {
+                    "output": {
+                        "connections": []
+                    }
+                },
+                "position": [
+                    -2004.6148880910005,
+                    -284.2663937021015
+                ],
+                "name": "Universal Input"
+            },
+            "233": {
+                "id": 233,
+                "data": {
+                    "name": "Speaker Output",
+                    "display": "Speaker minted a cool NFT sword in Webaverse.",
+                    "success": false,
+                    "socketKey": "581b8d79-0ecd-4f3d-8c78-5342c781c36d",
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        },
+                        "sendToPlaytest": {
+                            "expanded": true
+                        }
+                    }
+                },
+                "inputs": {
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 2536,
+                                "output": "speaker_output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2536,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2537,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    144.76773326536934,
+                    -441.69306127194244
+                ],
+                "name": "Output"
+            },
+            "2530": {
+                "id": 2530,
+                "data": {
+                    "name": "Factual Extraction",
+                    "fewshot": "#speaker: I just finished writing some really awesome code for Webaverse.\n#agent: Oh, you're contributing to Webaverse? That's awesome! I love open source projects, and Webaverse is one of my favorites.\nTask: Identify and summarize the factual biographical information, if any, in #speaker and #agent's conversation.\nFacts for #speaker: #speaker is a coder. #speaker contributes to Webaverse.\nFacts for #agent: #agent loves open source projects and Webaverse is one of her favorites.\n###\n#speaker: what do you think about \"interoperability\" #agent?\n#agent: Interoperability is the ability of different systems to communicate and share data with one another. It is an important concept in the technology industry, as it allows different devices, systems, and platforms to work together seamlessly. This can improve efficiency, reduce costs, and create new opportunities for innovation.\nTask: Identify and summarize the factual biographical information, if any, in #speaker and #agent's conversation.\nFacts for #speaker: <none>\nFacts for #agent: <none>\n###\n#speaker: I have a beautiful named Casper.\n#agent: Oh I love dogs, what breed is he?\nTask: Identify and summarize the factual biographical information, if any, in #speaker and #agent's conversation.\n#speaker: #speaker has a dog named Casper.\nFacts for #agent: #agent loves dogs.\n###\n#speaker: is JSON a good format to use to build systems with?\n#agent: JSON a popular data format that is used to store and exchange information. It is lightweight, easy to read, and can be used to create systems with minimal effort. Additionally, JSON has built-in support in many programming languages, making it an ideal choice.\nTask: Identify and summarize the factual biographical information, if any, in #speaker and #agent's conversation.\nFacts for #speaker: <none>\nFacts for #agent: <none>\n###\n#speaker: what is your favorite food?\n#agent: My favorite food is sushi! I love the flavors and textures.\nTask: Identify and summarize the factual biographical information, if any, in #speaker and #agent's conversation.\nFacts for #speaker: <none>\nFacts for #agent: #agent's favorite food is sushi.\n###\n#speaker: #speaker_input\n#agent: #agent_input\nTask: Identify and summarize the factual biographical information, if any, in #speaker and #agent's conversation.\nFacts for #speaker:",
+                    "success": false,
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        },
+                        "fewshot": {
+                            "expanded": true
+                        }
+                    }
+                },
+                "inputs": {},
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 2531,
+                                "input": "prompt",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -1575.952092253753,
+                    -723.2905094599474
+                ],
+                "name": "Fewshot Variable"
+            },
+            "2531": {
+                "id": 2531,
+                "data": {
+                    "code": "\n// inputs: dictionary of inputs based on socket names\n// data: internal data of the node to read or write to nodes data state\n// state: access to the current game state in the state manager window. Return state to update the state.\nfunction worker({\n  speaker,\n  agent,\n  prompt,\n  speaker_input,\n  agent_input\n}, data, state) {\n  \n  // replaceAll #agent, #speaker and #input (replace #conversation later)\n  let output = prompt\n    .replaceAll('#speaker_input', speaker_input)\n    .replaceAll('#agent_input', agent_input)\n\noutput = output.replaceAll('#speaker', speaker)\n    .replaceAll('#agent', agent)\n\n  // Keys of the object returned must match the names \n  // of your outputs you defined.\n  // To update the state, you must return the modified state.\n  return {\n    output\n  }\n}\n",
+                    "error": false,
+                    "inputs": [
+                        {
+                            "name": "prompt",
+                            "taskType": "output",
+                            "socketKey": "prompt",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        },
+                        {
+                            "name": "speaker_input",
+                            "taskType": "output",
+                            "socketKey": "speaker_input",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        },
+                        {
+                            "name": "agent_input",
+                            "taskType": "output",
+                            "socketKey": "agent_input",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        },
+                        {
+                            "name": "speaker",
+                            "taskType": "output",
+                            "socketKey": "speaker",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        },
+                        {
+                            "name": "agent",
+                            "taskType": "output",
+                            "socketKey": "agent",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        }
+                    ],
+                    "display": "{\"output\":\"Speaker: I just finished writing some really awesome code for Webaverse.\\nAgent: Oh, you're contributing to Webaverse? That's awesome! I love open source projects, and Webaverse is one of my favorites.\\nTask: Identify and summarize the factual biographical information, if any, in Speaker and Agent's conversation.\\nFacts for Speaker: Speaker is a coder. Speaker contributes to Webaverse.\\nFacts for Agent: Agent loves open source projects and Webaverse is one of her favorites.\\n###\\nSpeaker: what do you think about \\\"interoperability\\\" Agent?\\nAgent: Interoperability is the ability of different systems to communicate and share data with one another. It is an important concept in the technology industry, as it allows different devices, systems, and platforms to work together seamlessly. This can improve efficiency, reduce costs, and create new opportunities for innovation.\\nTask: Identify and summarize the factual biographical information, if any, in Speaker and Agent's conversation.\\nFacts for Speaker: <none>\\nFacts for Agent: <none>\\n###\\nSpeaker: I have a beautiful named Casper.\\nAgent: Oh I love dogs, what breed is he?\\nTask: Identify and summarize the factual biographical information, if any, in Speaker and Agent's conversation.\\nSpeaker: Speaker has a dog named Casper.\\nFacts for Agent: Agent loves dogs.\\n###\\nSpeaker: what do you look like?\\nAgent: As an AI agent, I have no appearance, but I create images of myself using Stable Diffusion. \\nSpeaker: my eyes are blue\\nAgent: Oh, that's really neat! If I had eyes, I think that they would be brown, because it's the color for human eyes.\\nTask: Identify and summarize the factual biographical information, if any, in Speaker and Agent's conversation.\\nFacts for Speaker: Speaker has blue eyes.\\nFacts for Agent: If Agent had eyes, they would be brown.\\n###\\nSpeaker: is JSON a good format to use to build systems with?\\nAgent: JSON a popular data format that is used to store and exchange information. It is lightweight, easy to read, and can be used to create systems with minimal effort. Additionally, JSON has built-in support in many programming languages, making it an ideal choice.\\nTask: Identify and summarize the factual biographical information, if any, in Speaker and Agent's conversation.\\nFacts for Speaker: <none>\\nFacts for Agent: <none>\\n###\\nSpeaker: can you post me a rick role GIF Agent?\\nAgent: Sure! Here's a Rick Roll GIF: https://tenor.com/view/rickroll-roll-rick-never-gonna-give-you-up-never-gonna-gif-22954713\\nTask: Identify and summarize the factual biographical information, if any, in Speaker and Agent's conversation.\\nFacts for Speaker: <none>\\nFacts for Agent: <none>\\n###\\nSpeaker: what is your favorite food?\\nAgent: My favorite food is sushi! I love the flavors and textures.\\nTask: Identify and summarize the factual biographical information, if any, in Speaker and Agent's conversation.\\nFacts for Speaker: <none>\\nFacts for Agent: Agent's favorite food is sushi.\\n###\\nSpeaker: I just minted a cool NFT sword in Webaverse.\\nAgent: Oh, that's awesome! I was thinking of minting a pet later.\\nTask: Identify and summarize the factual biographical information, if any, in Speaker and Agent's conversation.\\nFacts for Speaker:\"}",
+                    "outputs": [
+                        {
+                            "name": "output",
+                            "taskType": "output",
+                            "socketKey": "output",
+                            "socketType": "anySocket",
+                            "connectionType": "output"
+                        }
+                    ],
+                    "success": false,
+                    "dataControls": {
+                        "code": {
+                            "expanded": true
+                        },
+                        "name": {
+                            "expanded": true
+                        },
+                        "inputs": {
+                            "expanded": true
+                        },
+                        "outputs": {
+                            "expanded": true
+                        }
+                    }
+                },
+                "inputs": {
+                    "prompt": {
+                        "connections": [
+                            {
+                                "node": 2530,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "speaker_input": {
+                        "connections": [
+                            {
+                                "node": 2540,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "agent_input": {
+                        "connections": [
+                            {
+                                "node": 2541,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "speaker": {
+                        "connections": [
+                            {
+                                "node": 2543,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "agent": {
+                        "connections": [
+                            {
+                                "node": 2544,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 124,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 2535,
+                                "input": "string",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2535,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -1065.2189135367869,
+                    -326.27482408211415
+                ],
+                "name": "Code"
+            },
+            "2532": {
+                "id": 2532,
+                "data": {
+                    "name": "Speaker Input",
+                    "text": "I just minted a cool NFT sword in Webaverse.",
+                    "success": false,
+                    "socketKey": "d22a5874-5819-4e41-90c5-2d8cc79dc9cd",
+                    "useDefault": true,
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        },
+                        "useDefault": {
+                            "expanded": true
+                        },
+                        "playtestToggle": {
+                            "expanded": true
+                        }
+                    },
+                    "defaultValue": "I just minted a cool NFT sword in Webaverse.",
+                    "playtestToggle": {
+                        "receivePlaytest": false
+                    }
+                },
+                "inputs": {},
+                "outputs": {
+                    "output": {
+                        "connections": []
+                    }
+                },
+                "position": [
+                    -2000.6154861643208,
+                    -527.5659672094283
+                ],
+                "name": "Universal Input"
+            },
+            "2533": {
+                "id": 2533,
+                "data": {
+                    "name": "Speaker",
+                    "text": "Speaker",
+                    "outputs": [],
+                    "success": false,
+                    "socketKey": "9d61118c-3c5a-4379-9dae-41965e56207f",
+                    "useDefault": true,
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        },
+                        "useDefault": {
+                            "expanded": true
+                        },
+                        "playtestToggle": {
+                            "expanded": true
+                        }
+                    },
+                    "defaultValue": "Speaker",
+                    "playtestToggle": {
+                        "outputs": [],
+                        "receivePlaytest": false
+                    }
+                },
+                "inputs": {},
+                "outputs": {
+                    "output": {
+                        "connections": []
+                    }
+                },
+                "position": [
+                    -1990.2143389193143,
+                    -53.788550914850575
+                ],
+                "name": "Universal Input"
+            },
+            "2534": {
+                "id": 2534,
+                "data": {
+                    "name": "Agent",
+                    "text": "Agent",
+                    "outputs": [],
+                    "success": false,
+                    "socketKey": "9d61118c-3c5a-4379-9dae-41965e56207f",
+                    "useDefault": true,
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        },
+                        "useDefault": {
+                            "expanded": true
+                        },
+                        "playtestToggle": {
+                            "expanded": true
+                        }
+                    },
+                    "defaultValue": "Agent",
+                    "playtestToggle": {
+                        "outputs": [],
+                        "receivePlaytest": false
+                    }
+                },
+                "inputs": {},
+                "outputs": {
+                    "output": {
+                        "connections": []
+                    }
+                },
+                "position": [
+                    -2017.1402875799981,
+                    186.4628170360981
+                ],
+                "name": "Universal Input"
+            },
+            "2535": {
+                "id": 2535,
+                "data": {
+                    "stop": "###",
+                    "topP": ".8",
+                    "success": false,
+                    "maxTokens": "200",
+                    "modelName": "text-davinci-003",
+                    "temperature": ".5",
+                    "dataControls": {
+                        "stop": {
+                            "expanded": true
+                        },
+                        "topP": {
+                            "expanded": true
+                        },
+                        "maxTokens": {
+                            "expanded": true
+                        },
+                        "modelName": {
+                            "expanded": true
+                        },
+                        "temperature": {
+                            "expanded": false
+                        },
+                        "presencePenalty": {
+                            "expanded": true
+                        },
+                        "frequencyPenalty": {
+                            "expanded": true
+                        }
+                    },
+                    "presencePenalty": "0",
+                    "frequencyPenalty": "0"
+                },
+                "inputs": {
+                    "string": {
+                        "connections": [
+                            {
+                                "node": 2531,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "settings": {
+                        "connections": []
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2531,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2536,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 2536,
+                                "input": "input",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -654.4053440535181,
+                    -271.7849215603707
+                ],
+                "name": "Agent Text Completion"
+            },
+            "2536": {
+                "id": 2536,
+                "data": {
+                    "code": "function worker({input}, data, state) {\n  let inputLines = input.split('\\n');\n  const speaker_output = inputLines[0].includes('<none>') ? null :\n    inputLines[0].trim();\n\n  const agent_output = inputLines[1].includes('<none>') ? null :\n    inputLines[1].trim();\n    console.log('speaker_output, agent_output', speaker_output, agent_output)\n    return {\n      speaker_output,\n      agent_output\n    }\n}\n",
+                    "name": "Process Response",
+                    "inputs": [
+                        {
+                            "name": "input",
+                            "taskType": "output",
+                            "socketKey": "input",
+                            "socketType": "anySocket",
+                            "connectionType": "input"
+                        }
+                    ],
+                    "display": "{\"speaker_output\":\"Speaker minted a cool NFT sword in Webaverse.\",\"agent_output\":\"Facts for Agent: Agent is thinking of minting a pet later.\"}",
+                    "outputs": [
+                        {
+                            "name": "speaker_output",
+                            "taskType": "output",
+                            "socketKey": "speaker_output",
+                            "socketType": "anySocket",
+                            "connectionType": "output"
+                        },
+                        {
+                            "name": "agent_output",
+                            "taskType": "output",
+                            "socketKey": "agent_output",
+                            "socketType": "anySocket",
+                            "connectionType": "output"
+                        }
+                    ],
+                    "success": false,
+                    "dataControls": {
+                        "code": {
+                            "expanded": true
+                        },
+                        "name": {
+                            "expanded": true
+                        },
+                        "inputs": {
+                            "expanded": true
+                        },
+                        "outputs": {
+                            "expanded": true
+                        }
+                    }
+                },
+                "inputs": {
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 2535,
+                                "output": "output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2535,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "speaker_output": {
+                        "connections": [
+                            {
+                                "node": 233,
+                                "input": "input",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "agent_output": {
+                        "connections": [
+                            {
+                                "node": 2537,
+                                "input": "input",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 233,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -254.90184501149412,
+                    -278.1301625271989
+                ],
+                "name": "Code"
+            },
+            "2537": {
+                "id": 2537,
+                "data": {
+                    "name": "Agent Output",
+                    "success": false,
+                    "socketKey": "581b8d79-0ecd-4f3d-8c78-5342c781c36d",
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        },
+                        "sendToPlaytest": {
+                            "expanded": true
+                        }
+                    },
+                    "sendToPlaytest": false
+                },
+                "inputs": {
+                    "input": {
+                        "connections": [
+                            {
+                                "node": 2536,
+                                "output": "agent_output",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    },
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 233,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2538,
+                                "input": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    500.93301191938036,
+                    -183.47741216677719
+                ],
+                "name": "Output"
+            },
+            "2538": {
+                "id": 2538,
+                "data": {
+                    "name": "trigger-out-2538",
+                    "success": false,
+                    "socketKey": "15a3083b-d648-4ded-a4cb-64006a07db65",
+                    "dataControls": {
+                        "name": {
+                            "expanded": true
+                        }
+                    }
+                },
+                "inputs": {
+                    "trigger": {
+                        "connections": [
+                            {
+                                "node": 2537,
+                                "output": "trigger",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "outputs": {},
+                "position": [
+                    909.6011790818278,
+                    -141.77421265377038
+                ],
+                "name": "Module Trigger Out"
+            },
+            "2540": {
+                "id": 2540,
+                "data": {
+                    "_var": "I just minted a cool NFT sword in Webaverse.",
+                    "name": "Speaker Input",
+                    "success": false,
+                    "dataControls": {
+                        "_var": {
+                            "expanded": true
+                        },
+                        "name": {
+                            "expanded": true
+                        }
+                    }
+                },
+                "inputs": {},
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 2531,
+                                "input": "speaker_input",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -1580.7257095850366,
+                    -509.30016405236876
+                ],
+                "name": "String Variable"
+            },
+            "2541": {
+                "id": 2541,
+                "data": {
+                    "_var": "Oh, that's awesome! I was thinking of minting a pet later.",
+                    "name": "Agent Input",
+                    "success": false,
+                    "dataControls": {
+                        "_var": {
+                            "expanded": true
+                        },
+                        "name": {
+                            "expanded": true
+                        }
+                    }
+                },
+                "inputs": {},
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 2531,
+                                "input": "agent_input",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -1594.0214372353307,
+                    -265.74002440206397
+                ],
+                "name": "String Variable"
+            },
+            "2543": {
+                "id": 2543,
+                "data": {
+                    "_var": "Speaker",
+                    "name": "Speaker",
+                    "success": false,
+                    "dataControls": {
+                        "_var": {
+                            "expanded": true
+                        },
+                        "name": {
+                            "expanded": true
+                        }
+                    }
+                },
+                "inputs": {},
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 2531,
+                                "input": "speaker",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -1588.8300377578926,
+                    -68.3661498310112
+                ],
+                "name": "String Variable"
+            },
+            "2544": {
+                "id": 2544,
+                "data": {
+                    "_var": "Agent",
+                    "name": "Agent",
+                    "success": false,
+                    "dataControls": {
+                        "_var": {
+                            "expanded": true
+                        },
+                        "name": {
+                            "expanded": true
+                        }
+                    }
+                },
+                "inputs": {},
+                "outputs": {
+                    "output": {
+                        "connections": [
+                            {
+                                "node": 2531,
+                                "input": "agent",
+                                "data": {
+                                    "pins": []
+                                }
+                            }
+                        ]
+                    }
+                },
+                "position": [
+                    -1572.476736101938,
+                    118.99164960668514
+                ],
+                "name": "String Variable"
+            }
+        }
+    },
+    "createdAt": "2022-12-13T05:59:28.101Z",
+    "updatedAt": "2022-12-13T07:22:55.812Z",
+    "deletedAt": null,
+    "userId": "global",
+    "modules": [],
+    "gameState": {}
+}
