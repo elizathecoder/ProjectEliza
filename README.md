@@ -9,7 +9,7 @@ The latest version of the Thoth software is here: https://github.com/TheNexusCit
 How to make an agent, set everything up and get started:
 https://www.youtube.com/watch?v=_4t9DK_MK-c
 
-Adding biographical factual extraction and injection to the conversation loop: https://www.youtube.com/watch?v=iLAi_GrmdqA
+A playlist of community calls covering the entire development of Eliza is here: https://www.youtube.com/playlist?list=PLx5pnFXdPTRxn7mS3bz7wzFZ0QYt8Loh2
 
 ### Notable features
 - Open source, AI bot that anyone can run
