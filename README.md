@@ -21,3 +21,6 @@ the han
 - Skills library with modular components and skills to build and share complex behavior
 
 If you're interested in contributed, we're developing in the open at M3: https://discord.gg/m3org
+
+## Member of M3 Metaverse Makers https://3d.m3org.com/
+![image](https://user-images.githubusercontent.com/64185677/173713393-45a998e7-e8f1-4a31-afd9-b2d4f8fa3af9.png)
