@@ -1,0 +1,16 @@
+{
+  "name": "checkwallet",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "checkwallet.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@thirdweb-dev/sdk": "^3.6.7",
+    "ethers": "^5.7.2"
+  }
+}
