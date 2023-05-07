@@ -3,7 +3,6 @@
         {
             "id": "a7e355f6-1ddd-4352-8fed-f1ed33b24a0e",
             "publicVariables": "{}",
-            "secrets": "{\"openai_api_key\":\"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\"}",
             "spells": null,
             "name": "ELIZA",
             "enabled": true,
@@ -2604,12 +2603,7 @@
                 "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
                 "updatedAt": "1683364543484"
             },
-            "data": {
-                "rest_api_key": "d57931b8f843131c9aed9bcfaf34b301",
-                "task_enabled": true,
-                "discord_api_key": "NjkwMDQ2MDU4OTM1NjE1NTIx.GPtjC8.UbuxjYz4ANAweL6Xa56L2bUzKrIW5x_Qi3hmT8",
-                "discord_enabled": true
-            }
+            "data": {}
         }
     ],
     "spells": [
