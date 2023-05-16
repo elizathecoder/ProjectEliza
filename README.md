@@ -1,5 +1,5 @@
 # Project Eliza
-Eliza is an open source autonomous agent built by in the open. Anyone can run Eliza on their own computer, and connect it to Discord, Slack, Google Meet, Zoom, Reddit, Twitter, Text Message and even Voice. Anyone can add new skills to Eliza, and share them with the community.
+Eliza is an open source autonomous agent built in the open. Anyone can run Eliza on their own computer, and connect it to Discord, Slack, Google Meet, Zoom, Reddit, Twitter, Text Message, and even Voice. Anyone can add new skills to Eliza and share them with the community.
 
 Please file all bugs under https://github.com/elizathecoder/ProjectEliza/issues
 
