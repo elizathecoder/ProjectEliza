@@ -1,0 +1,14 @@
+{
+    "name": "spells",
+    "version": "1.0.0",
+    "description": "spells",
+    "main": "index.js",
+    "scripts": {
+        "pack": "node scripts/pack-spells.js",
+        "unpack": "node scripts/unpack-spells.js"
+    },
+    "author": "Vladimir",
+    "license": "ISC",
+    "dependencies": {
+    }
+}

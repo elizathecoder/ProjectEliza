@@ -3,6 +3,16 @@ Eliza is an open source autonomous agent built by in the open. Anyone can run El
 
 Please file all bugs under https://github.com/elizathecoder/ProjectEliza/issues
 
+# Packing spells into a project
+Copy your spells into the /spells folder and run `npm run pack` to pack them into a project.
+All spells in the /spells folder will get packed into ELIZA.project.json, and any spells that were in ELIZA.project.json will be overwritten
+
+# Unpacking spells from a project
+Run `npm run unpack` to unpack spells from a project.
+All spells in the /spells folder will be overwritten by the spells in ELIZA.project.json
+
+# Made With Magick!
+
 Eliza is built on Magick! The latest version of Magick is here: https://github.com/Oneirocom/MagickML
 
 To get started with Magick from the very basics, check out the Magick Academy series: https://www.youtube.com/playlist?list=PLlHAC2lyWAzxtPANXyhbQfUtGLdvM0tHm
