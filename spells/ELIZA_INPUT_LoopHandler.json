@@ -1,0 +1,276 @@
+{
+  "id": "bc1fe9e5-b482-4599-9f00-f7562400db02",
+  "name": "ELIZA_INPUT_LoopHandler",
+  "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
+  "hash": "cfe86a88ea330ed96ba8aaac9fd46242",
+  "createdAt": "1684285479222",
+  "updatedAt": "1684285828117",
+  "graph": {
+    "id": "demo@0.1.0",
+    "nodes": {
+      "232": {
+        "id": 232,
+        "data": {
+          "name": "Input - Default",
+          "text": {
+            "id": "2eb64348-adee-4118-bcca-19697ca3a16a",
+            "inputs": {},
+            "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
+            "spellName": "Starter",
+            "publicVariables": "[]"
+          },
+          "isInput": true,
+          "outputs": [],
+          "success": false,
+          "inputType": "Default",
+          "socketKey": "9d61118c-3c5a-4379-9dae-41965e56207f",
+          "useDefault": false,
+          "dataControls": {
+            "inputType": {
+              "expanded": true
+            },
+            "useDefault": {
+              "expanded": true
+            },
+            "defaultValue": {
+              "expanded": true
+            }
+          },
+          "defaultValue": "Hello world",
+          "playtestToggle": {
+            "outputs": [],
+            "receivePlaytest": false
+          }
+        },
+        "name": "Input",
+        "inputs": {},
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 494,
+                "input": "event"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 494,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -619.70703125,
+          -3.83203125
+        ]
+      },
+      "233": {
+        "id": 233,
+        "data": {
+          "name": "Output",
+          "success": false,
+          "isOutput": true,
+          "socketKey": "0f17a35e-1380-428b-bc87-4a38d207fefc",
+          "dataControls": {
+            "name": {
+              "expanded": true
+            }
+          }
+        },
+        "name": "Output",
+        "inputs": {
+          "event": {
+            "connections": []
+          },
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 493,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 493,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": []
+          },
+          "trigger": {
+            "connections": []
+          }
+        },
+        "position": [
+          200,
+          0
+        ]
+      },
+      "493": {
+        "id": 493,
+        "data": {
+          "success": false
+        },
+        "name": "Echo",
+        "inputs": {
+          "string": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 494,
+                "output": "content"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 494,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 233,
+                "input": "input"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 233,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -67.12109375,
+          1.0078125
+        ]
+      },
+      "494": {
+        "id": 494,
+        "data": {
+          "success": false,
+          "socketKey": "bbd9c07c-7bcc-454a-b5fe-cc6fd63f6a94"
+        },
+        "name": "Event Destructure",
+        "inputs": {
+          "event": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 232,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 232,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "client": {
+            "connections": []
+          },
+          "sender": {
+            "connections": []
+          },
+          "agentId": {
+            "connections": []
+          },
+          "channel": {
+            "connections": []
+          },
+          "content": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 493,
+                "input": "string"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 493,
+                "input": "trigger"
+              }
+            ]
+          },
+          "entities": {
+            "connections": []
+          },
+          "observer": {
+            "connections": []
+          },
+          "projectId": {
+            "connections": []
+          },
+          "channelType": {
+            "connections": []
+          }
+        },
+        "position": [
+          -338.375,
+          -0.98828125
+        ]
+      }
+    },
+    "comments": []
+  }
+}

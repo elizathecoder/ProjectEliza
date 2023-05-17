@@ -1,0 +1,480 @@
+{
+  "id": "13ebb4c7-7f36-4768-b62b-f4fc2a690f86",
+  "name": "ELIZA_MODULE_FindInterest",
+  "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
+  "hash": "0ff985d8cbdfe141b8c00c2f76eea82b",
+  "createdAt": "1684283672967",
+  "updatedAt": "1684287200509",
+  "graph": {
+    "id": "demo@0.1.0",
+    "nodes": {
+      "721": {
+        "id": 721,
+        "data": {
+          "type": "interest",
+          "max_count": "6"
+        },
+        "name": "Get Documents",
+        "inputs": {
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3498,
+                "output": "trigger"
+              }
+            ]
+          },
+          "embedding": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3498,
+                "output": "embedding"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 951,
+                "input": "trigger"
+              }
+            ]
+          },
+          "documents": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 951,
+                "input": "array"
+              }
+            ]
+          }
+        },
+        "position": [
+          -2880,
+          -784
+        ]
+      },
+      "951": {
+        "id": 951,
+        "data": {
+          "element": 0
+        },
+        "name": "Get Value From Array",
+        "inputs": {
+          "array": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 721,
+                "output": "documents"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 721,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 952,
+                "input": "object"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 952,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -2592,
+          -784
+        ]
+      },
+      "952": {
+        "id": 952,
+        "data": {
+          "outputs": [
+            {
+              "name": "content",
+              "taskType": "output",
+              "socketKey": "content",
+              "socketType": "anySocket",
+              "connectionType": "output"
+            }
+          ]
+        },
+        "name": "Get Values From Object",
+        "inputs": {
+          "object": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 951,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 951,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "content": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 953,
+                "input": "input"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 953,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -2592,
+          -592
+        ]
+      },
+      "953": {
+        "id": 953,
+        "data": {},
+        "name": "JSON To Object",
+        "inputs": {
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 952,
+                "output": "content"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 952,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 954,
+                "input": "object"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 954,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -2592,
+          -400
+        ]
+      },
+      "954": {
+        "id": 954,
+        "data": {
+          "outputs": [
+            {
+              "name": "name",
+              "taskType": "output",
+              "socketKey": "name",
+              "socketType": "anySocket",
+              "connectionType": "output"
+            }
+          ]
+        },
+        "name": "Get Values From Object",
+        "inputs": {
+          "object": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 953,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 953,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "name": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3118,
+                "input": "input"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3118,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -2592,
+          -208
+        ]
+      },
+      "2035": {
+        "id": 2035,
+        "data": {
+          "name": "Input - Default",
+          "isInput": true,
+          "useData": true,
+          "inputName": "Default",
+          "socketKey": "453d9ea0-af08-4ff0-ad07-b4a7ea6d6e52"
+        },
+        "name": "Input",
+        "inputs": {},
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3498,
+                "input": "object"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3498,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -3456,
+          -784
+        ]
+      },
+      "3118": {
+        "id": 3118,
+        "data": {
+          "name": "Output - Default",
+          "isOutput": true,
+          "socketKey": "bc16c15c-814c-442d-aadd-837438e74c8e",
+          "sendToPlaytest": true
+        },
+        "name": "Output",
+        "inputs": {
+          "event": {
+            "connections": []
+          },
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 954,
+                "output": "name"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 954,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": []
+          },
+          "trigger": {
+            "connections": []
+          }
+        },
+        "position": [
+          -2144,
+          -784
+        ]
+      },
+      "3498": {
+        "id": 3498,
+        "data": {
+          "outputs": [
+            {
+              "name": "embedding",
+              "taskType": "output",
+              "socketKey": "embedding",
+              "socketType": "anySocket",
+              "connectionType": "output"
+            }
+          ]
+        },
+        "name": "Get Values From Object",
+        "inputs": {
+          "object": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2035,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2035,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 721,
+                "input": "trigger"
+              }
+            ]
+          },
+          "embedding": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 721,
+                "input": "embedding"
+              }
+            ]
+          }
+        },
+        "position": [
+          -3168,
+          -784
+        ]
+      }
+    },
+    "comments": []
+  }
+}

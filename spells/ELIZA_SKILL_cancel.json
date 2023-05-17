@@ -1,0 +1,213 @@
+{
+  "id": "4456c846-a469-4b5a-851f-da1e5f83f6ed",
+  "name": "ELIZA_SKILL_cancel",
+  "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
+  "hash": "209bb651f73083dda6bc6e4f7a318f99",
+  "createdAt": "1684282832427",
+  "updatedAt": null,
+  "graph": {
+    "id": "demo@0.1.0",
+    "nodes": {
+      "233": {
+        "id": 233,
+        "data": {
+          "name": "Output - Default",
+          "success": false,
+          "isOutput": true,
+          "socketKey": "08e69df5-7f0f-42f7-a880-8ab319e0f38f",
+          "outputType": "Default",
+          "dataControls": {
+            "outputType": {
+              "expanded": true
+            }
+          },
+          "sendToPlaytest": true
+        },
+        "name": "Output",
+        "inputs": {
+          "event": {
+            "connections": []
+          },
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 1816,
+                "output": "prompt"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 1816,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": []
+          },
+          "trigger": {
+            "connections": []
+          }
+        },
+        "position": [
+          -416,
+          -352
+        ]
+      },
+      "1477": {
+        "id": 1477,
+        "data": {
+          "name": "Input - Default",
+          "isInput": true,
+          "useData": true,
+          "inputName": "Default",
+          "socketKey": "37c27bb8-ebee-4f7b-ad7c-13293192d487",
+          "useTrigger": true
+        },
+        "name": "Input",
+        "inputs": {},
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 1821,
+                "input": "task"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 1821,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -1392,
+          -128
+        ]
+      },
+      "1816": {
+        "id": 1816,
+        "data": {
+          "fewshot": "I have canceled the task, because I could not complete it successfully.",
+          "dataControls": {
+            "inputs": {
+              "expanded": true
+            },
+            "fewshot": {
+              "expanded": true
+            }
+          }
+        },
+        "name": "Text Template",
+        "inputs": {
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 1821,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "prompt": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 233,
+                "input": "input"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 233,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -784,
+          -352
+        ]
+      },
+      "1821": {
+        "id": 1821,
+        "data": {},
+        "name": "Cancel Task",
+        "inputs": {
+          "task": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 1477,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 1477,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 1816,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -1056,
+          -128
+        ]
+      }
+    },
+    "comments": []
+  }
+}

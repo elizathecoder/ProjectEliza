@@ -1,0 +1,627 @@
+{
+  "id": "a1f0c477-99ae-4744-b15e-60dc6dd354f7",
+  "name": "ELIZA_INTENT_knowledge",
+  "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
+  "hash": "ea4c7def39886abc0c3715928120dbef",
+  "createdAt": "1684282832355",
+  "updatedAt": "1684286444101",
+  "graph": {
+    "id": "demo@0.1.0",
+    "nodes": {
+      "232": {
+        "id": 232,
+        "data": {
+          "name": "Input - Default",
+          "text": {
+            "id": "2eb64348-adee-4118-bcca-19697ca3a16a",
+            "inputs": {},
+            "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
+            "spellName": "Starter",
+            "publicVariables": "[]"
+          },
+          "isInput": true,
+          "outputs": [],
+          "success": false,
+          "useData": true,
+          "inputName": "Default",
+          "inputType": "Default",
+          "socketKey": "9d61118c-3c5a-4379-9dae-41965e56207f",
+          "useDefault": false,
+          "dataControls": {
+            "inputType": {
+              "expanded": true
+            },
+            "useDefault": {
+              "expanded": true
+            },
+            "defaultValue": {
+              "expanded": true
+            }
+          },
+          "defaultValue": "Hello world",
+          "playtestToggle": {
+            "outputs": [],
+            "receivePlaytest": false
+          }
+        },
+        "name": "Input",
+        "inputs": {},
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 494,
+                "input": "event"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3671,
+                "input": "event"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3672,
+                "input": "event"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 494,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -619.70703125,
+          -3.83203125
+        ]
+      },
+      "233": {
+        "id": 233,
+        "data": {
+          "name": "Output",
+          "success": false,
+          "isOutput": true,
+          "socketKey": "0f17a35e-1380-428b-bc87-4a38d207fefc",
+          "dataControls": {
+            "name": {
+              "expanded": true
+            }
+          },
+          "sendToPlaytest": true
+        },
+        "name": "Output",
+        "inputs": {
+          "event": {
+            "connections": []
+          },
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3670,
+                "output": "result"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3670,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": []
+          },
+          "trigger": {
+            "connections": []
+          }
+        },
+        "position": [
+          912,
+          -224
+        ]
+      },
+      "494": {
+        "id": 494,
+        "data": {
+          "success": false,
+          "socketKey": "bbd9c07c-7bcc-454a-b5fe-cc6fd63f6a94"
+        },
+        "name": "Event Destructure",
+        "inputs": {
+          "event": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 232,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 232,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "client": {
+            "connections": []
+          },
+          "sender": {
+            "connections": []
+          },
+          "agentId": {
+            "connections": []
+          },
+          "channel": {
+            "connections": []
+          },
+          "content": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3670,
+                "input": "input"
+              }
+            ]
+          },
+          "rawData": {
+            "connections": []
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3671,
+                "input": "trigger"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3672,
+                "input": "trigger"
+              }
+            ]
+          },
+          "entities": {
+            "connections": []
+          },
+          "observer": {
+            "connections": []
+          },
+          "connector": {
+            "connections": []
+          },
+          "embedding": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3672,
+                "input": "embedding"
+              }
+            ]
+          },
+          "projectId": {
+            "connections": []
+          },
+          "channelType": {
+            "connections": []
+          }
+        },
+        "position": [
+          -338.375,
+          -0.98828125
+        ]
+      },
+      "3670": {
+        "id": 3670,
+        "data": {
+          "model": "chat-bison-001",
+          "top_k": 50,
+          "top_p": 1,
+          "temperature": 0.5,
+          "stopSequences": ""
+        },
+        "name": "Generate Text",
+        "inputs": {
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 494,
+                "output": "content"
+              }
+            ]
+          },
+          "system": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3675,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3674,
+                "output": "default"
+              }
+            ]
+          },
+          "examples": {
+            "connections": []
+          },
+          "conversation": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3671,
+                "output": "events"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "error": {
+            "connections": []
+          },
+          "result": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 233,
+                "input": "input"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 233,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          624,
+          -224
+        ]
+      },
+      "3671": {
+        "id": 3671,
+        "data": {
+          "name": "recall conversation",
+          "type": "conversation",
+          "max_count": "6",
+          "socketKey": null
+        },
+        "name": "Event Recall",
+        "inputs": {
+          "event": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 232,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 494,
+                "output": "trigger"
+              }
+            ]
+          },
+          "embedding": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "events": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3670,
+                "input": "conversation"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3674,
+                "input": "recent"
+              }
+            ]
+          }
+        },
+        "position": [
+          16,
+          0
+        ]
+      },
+      "3672": {
+        "id": 3672,
+        "data": {
+          "name": "longterm memory",
+          "type": "conversation",
+          "max_count": "3",
+          "socketKey": null
+        },
+        "name": "Event Recall",
+        "inputs": {
+          "event": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 232,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 494,
+                "output": "trigger"
+              }
+            ]
+          },
+          "embedding": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 494,
+                "output": "embedding"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "events": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3675,
+                "input": "events"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3675,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          16,
+          -288
+        ]
+      },
+      "3674": {
+        "id": 3674,
+        "data": {
+          "inputs": [
+            {
+              "name": "recent",
+              "taskType": "output",
+              "socketKey": "recent",
+              "socketType": "triggerSocket",
+              "connectionType": "input"
+            },
+            {
+              "name": "memory",
+              "taskType": "output",
+              "socketKey": "memory",
+              "socketType": "triggerSocket",
+              "connectionType": "input"
+            }
+          ]
+        },
+        "name": "Wait For All",
+        "inputs": {
+          "memory": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3675,
+                "output": "trigger"
+              }
+            ]
+          },
+          "recent": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3671,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "default": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3670,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          320,
+          -96
+        ]
+      },
+      "3675": {
+        "id": 3675,
+        "data": {
+          "code": "\n// inputs: dictionary of inputs based on socket names\n// data: internal data of the node to read or write to nodes data state\nfunction worker({\n  events,\n}, data) {\n\n  const eventText = events.map(event => {\n    const text = `${event.sender}: ${event.content}\\n`\n    return text\n  })\n\nconst prompt = `[Events from memory]\n${eventText}\nRespond to the user in a helpful and professional manner.`\n\n  return {\n    output: prompt\n  }\n}",
+          "inputs": [
+            {
+              "name": "events",
+              "taskType": "output",
+              "socketKey": "events",
+              "socketType": "anySocket",
+              "connectionType": "input"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "output",
+              "taskType": "output",
+              "socketKey": "output",
+              "socketType": "anySocket",
+              "connectionType": "output"
+            }
+          ]
+        },
+        "name": "Javascript",
+        "inputs": {
+          "events": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3672,
+                "output": "events"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3672,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3670,
+                "input": "system"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3674,
+                "input": "memory"
+              }
+            ]
+          }
+        },
+        "position": [
+          320,
+          -288
+        ]
+      }
+    },
+    "comments": []
+  }
+}

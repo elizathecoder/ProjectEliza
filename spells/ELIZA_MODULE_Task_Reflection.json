@@ -1,0 +1,842 @@
+{
+  "id": "cba02933-a660-432a-9b1c-8285b62e77c2",
+  "name": "ELIZA_MODULE_Task_Reflection",
+  "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
+  "hash": "0ffa38ebde98cc886d7435948642ab35",
+  "createdAt": "1684282832421",
+  "updatedAt": null,
+  "graph": {
+    "id": "demo@0.1.0",
+    "nodes": {
+      "727": {
+        "id": 727,
+        "data": {
+          "stop": "###",
+          "error": false,
+          "model": "chat-bison-001",
+          "top_k": 50,
+          "top_p": 1,
+          "success": false,
+          "temperature": 0.5,
+          "dataControls": {
+            "stop": {
+              "expanded": true
+            },
+            "model": {
+              "expanded": true
+            },
+            "top_p": {
+              "expanded": true
+            },
+            "temperature": {
+              "expanded": true
+            },
+            "presence_penalty": {
+              "expanded": true
+            },
+            "frequency_penalty": {
+              "expanded": true
+            }
+          },
+          "stopSequences": "",
+          "presence_penalty": 0,
+          "frequency_penalty": 0
+        },
+        "name": "Generate Text",
+        "inputs": {
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 1122,
+                "output": "input"
+              }
+            ]
+          },
+          "system": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 1122,
+                "output": "prompt"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 1122,
+                "output": "trigger"
+              }
+            ]
+          },
+          "examples": {
+            "connections": []
+          },
+          "conversation": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "error": {
+            "connections": []
+          },
+          "result": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3009,
+                "input": "input"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3009,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -2560,
+          -976
+        ]
+      },
+      "1122": {
+        "id": 1122,
+        "data": {
+          "code": "\n// inputs: dictionary of inputs based on socket names\n// data: internal data of the node to read or write to nodes data state\nfunction worker({\n  task,\n  skillResult,\n  skillName,\n  reasoning,\n}, data) {\n  // Keys of the object returned must match the names\n  // of your outputs you defined.\n  // To update the state, you must return the modified state.\n\nconst taskObjective = task.objective\n\nconst taskSteps = JSON.parse(task.steps)\n\n// TODO: Pull the reasoning, action and reflection\n\nconst lastSteps = taskSteps.map((step, idx) => {\n  return `Step ${idx}: ${step.reasoning} [ACTION]: ${step.action} [SKILL]: ${step.skill} [RESULT]: ${step.reflection}` + '\\n'\n})\n\nconst template = \n`[EXAMPLE REFLECTION OUTPUT]\nAssistant: {\"success\": true, \"content\": \"I checked my memory, and remembered that User had told me that their eyes are blue yesterday. I think they are testing me to see if my memory works. My eyes are blue.\"}\n\nAssistant: {\"success\": false, \"content\": \"I tried to search for the User's request with my \"google\" skill, but there seems to be no result. I should probably cancel the task and tell the user I had an error.\"}\n\nAssistant:  {\"success\": true, \"content\": \"I let the user know how things are going.\"}\n\n[OBJECTIVE]\n${taskObjective}\n${taskSteps.length > 0 && `\n[PREVIOUS STEPS]\nBreak the task into steps and then think about how to complete each step.\n${lastSteps.join('\\n')}\n`}\n[CURRENT STEP]\n${reasoning}\n\n[REFLECTION TASK]\nBriefly reflect on the result and what to do next. Your response should be formatted as JSON and follow the structure of the Assistant examples under the [EXAMPLE REFLECTION PROMPT] header. i.e. {\"success\": boolean, \"content\": string}\n`\n\nconst input = `You performed the \"${skillName}\" action and got the following result:\n${skillResult}\nIn the form of a JSON response, was the action successful? If the action was not successful, respond with with {\"success\": true, \"content\": \"<explanation>\"} and if the action was not successful, respond with with {\"success\": false, \"content\": \"<explanation>\"}\n`\n\nconsole.log('****** input ******', input)\nconsole.log('****** template ******', template)\n\n  return {\n    prompt: template,\n    input\n  }\n}",
+          "inputs": [
+            {
+              "name": "task",
+              "taskType": "output",
+              "socketKey": "task",
+              "socketType": "anySocket",
+              "connectionType": "input"
+            },
+            {
+              "name": "skillResult",
+              "taskType": "output",
+              "socketKey": "skillResult",
+              "socketType": "anySocket",
+              "connectionType": "input"
+            },
+            {
+              "name": "skillName",
+              "taskType": "output",
+              "socketKey": "skillName",
+              "socketType": "anySocket",
+              "connectionType": "input"
+            },
+            {
+              "name": "reasoning",
+              "taskType": "output",
+              "socketKey": "reasoning",
+              "socketType": "anySocket",
+              "connectionType": "input"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "input",
+              "taskType": "output",
+              "socketKey": "input",
+              "socketType": "anySocket",
+              "connectionType": "output"
+            },
+            {
+              "name": "prompt",
+              "taskType": "output",
+              "socketKey": "prompt",
+              "socketType": "anySocket",
+              "connectionType": "output"
+            }
+          ],
+          "success": false,
+          "dataControls": {
+            "code": {
+              "expanded": true
+            },
+            "name": {
+              "expanded": true
+            },
+            "inputs": {
+              "expanded": true
+            },
+            "outputs": {
+              "expanded": true
+            }
+          }
+        },
+        "name": "Javascript",
+        "inputs": {
+          "task": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2490,
+                "output": "task"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2490,
+                "output": "trigger"
+              }
+            ]
+          },
+          "reasoning": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2490,
+                "output": "reasoning"
+              }
+            ]
+          },
+          "skillName": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2490,
+                "output": "skillName"
+              }
+            ]
+          },
+          "skillResult": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2490,
+                "output": "skillResult"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 727,
+                "input": "input"
+              }
+            ]
+          },
+          "prompt": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 727,
+                "input": "system"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3223,
+                "input": "input"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 727,
+                "input": "trigger"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3224,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -2912,
+          -976
+        ]
+      },
+      "2489": {
+        "id": 2489,
+        "data": {
+          "name": "Output - Default",
+          "success": false,
+          "isOutput": true,
+          "socketKey": "79f3709a-be03-41ae-a8b7-2adc564915d5",
+          "sendToPlaytest": true
+        },
+        "name": "Output",
+        "inputs": {
+          "event": {
+            "connections": []
+          },
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3010,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3010,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": []
+          },
+          "trigger": {
+            "connections": []
+          }
+        },
+        "position": [
+          -1584,
+          -928
+        ]
+      },
+      "2490": {
+        "id": 2490,
+        "data": {
+          "outputs": [
+            {
+              "name": "reasoning",
+              "taskType": "output",
+              "socketKey": "reasoning",
+              "socketType": "anySocket",
+              "connectionType": "output"
+            },
+            {
+              "name": "skillName",
+              "taskType": "output",
+              "socketKey": "skillName",
+              "socketType": "anySocket",
+              "connectionType": "output"
+            },
+            {
+              "name": "skillResult",
+              "taskType": "output",
+              "socketKey": "skillResult",
+              "socketType": "anySocket",
+              "connectionType": "output"
+            },
+            {
+              "name": "task",
+              "taskType": "output",
+              "socketKey": "task",
+              "socketType": "anySocket",
+              "connectionType": "output"
+            }
+          ],
+          "success": false
+        },
+        "name": "Get Values From Object",
+        "inputs": {
+          "object": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2992,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2992,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "task": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 1122,
+                "input": "task"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3224,
+                "input": "object"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 1122,
+                "input": "trigger"
+              }
+            ]
+          },
+          "reasoning": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 1122,
+                "input": "reasoning"
+              }
+            ]
+          },
+          "skillName": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 1122,
+                "input": "skillName"
+              }
+            ]
+          },
+          "skillResult": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 1122,
+                "input": "skillResult"
+              }
+            ]
+          }
+        },
+        "position": [
+          -3264,
+          -976
+        ]
+      },
+      "2992": {
+        "id": 2992,
+        "data": {
+          "name": "Input - Default",
+          "isInput": true,
+          "success": false,
+          "useData": true,
+          "inputName": "Default",
+          "socketKey": "6debcf89-469c-4a64-a110-ca105696b1c2"
+        },
+        "name": "Input",
+        "inputs": {},
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2490,
+                "input": "object"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3183,
+                "input": "string"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2490,
+                "input": "trigger"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3183,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -3648,
+          -928
+        ]
+      },
+      "3009": {
+        "id": 3009,
+        "data": {
+          "code": "\n// inputs: dictionary of inputs based on socket names\n// data: internal data of the node to read or write to nodes data state\nfunction worker({\n  input,\n}, data) {\n    // remove all text before the first '{' in input\n    const shortInput = input.replace(/^[^{]*/, '');\n    // remove all text after the last '}' in input\n    const jsonInput = shortInput.replace(/[^}]*$/, '');\n\n    let valid = false;\n\n    // check if jsonInput is valid JSON\n    try {\n        valid = JSON.parse(jsonInput);\n    } catch (e) {\n    }\n\n    return {\n        output: valid ?? jsonInput\n    }\n}\n",
+          "inputs": [
+            {
+              "name": "input",
+              "taskType": "output",
+              "socketKey": "input",
+              "socketType": "anySocket",
+              "connectionType": "input"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "output",
+              "taskType": "output",
+              "socketKey": "output",
+              "socketType": "anySocket",
+              "connectionType": "output"
+            }
+          ],
+          "success": false
+        },
+        "name": "Javascript",
+        "inputs": {
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 727,
+                "output": "result"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 727,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3010,
+                "input": "input"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3010,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -2192,
+          -928
+        ]
+      },
+      "3010": {
+        "id": 3010,
+        "data": {
+          "success": false
+        },
+        "name": "JSON To Object",
+        "inputs": {
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3009,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3009,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2489,
+                "input": "input"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2489,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -1888,
+          -928
+        ]
+      },
+      "3183": {
+        "id": 3183,
+        "data": {
+          "name": "REFLECTION *****"
+        },
+        "name": "Log",
+        "inputs": {
+          "string": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2992,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2992,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {},
+        "position": [
+          -3241.5522957782437,
+          -1166.645134743822
+        ]
+      },
+      "3223": {
+        "id": 3223,
+        "data": {
+          "socketKey": "2950ef08-c361-46c5-a1dd-91c02ff040bb",
+          "sendToPlaytest": true
+        },
+        "name": "Respond",
+        "inputs": {
+          "event": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3224,
+                "output": "eventData"
+              }
+            ]
+          },
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 1122,
+                "output": "prompt"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3224,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "trigger": {
+            "connections": []
+          }
+        },
+        "position": [
+          -2336,
+          -1248
+        ]
+      },
+      "3224": {
+        "id": 3224,
+        "data": {
+          "outputs": [
+            {
+              "name": "eventData",
+              "taskType": "output",
+              "socketKey": "eventData",
+              "socketType": "anySocket",
+              "connectionType": "output"
+            }
+          ]
+        },
+        "name": "Get Values From Object",
+        "inputs": {
+          "object": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2490,
+                "output": "task"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 1122,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3223,
+                "input": "trigger"
+              }
+            ]
+          },
+          "eventData": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3223,
+                "input": "event"
+              }
+            ]
+          }
+        },
+        "position": [
+          -2736,
+          -1216
+        ]
+      }
+    },
+    "comments": [
+      {
+        "text": "handle tasks from the queue",
+        "type": "frame",
+        "links": [
+          541,
+          2035,
+          2992
+        ],
+        "width": 332,
+        "height": 246,
+        "position": [
+          -3703.2744962874835,
+          -990.4648048745739
+        ]
+      }
+    ]
+  }
+}

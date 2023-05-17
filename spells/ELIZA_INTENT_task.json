@@ -1,0 +1,797 @@
+{
+  "id": "3df04274-c705-43f4-8532-d623cca7af60",
+  "name": "ELIZA_INTENT_task",
+  "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
+  "hash": "54db2218d53e0de8e5b276d85a5d2e6e",
+  "createdAt": "1684282832369",
+  "updatedAt": "1684286488507",
+  "graph": {
+    "id": "demo@0.1.0",
+    "nodes": {
+      "232": {
+        "id": 232,
+        "data": {
+          "name": "Input - Default",
+          "text": {
+            "id": "2eb64348-adee-4118-bcca-19697ca3a16a",
+            "inputs": {
+              "Input - Default": {
+                "type": "playtest",
+                "client": "playtest",
+                "sender": "playtestSender",
+                "agentId": "preview",
+                "channel": "playtest",
+                "content": "testing",
+                "entities": [
+                  "playtestSender",
+                  "Agent"
+                ],
+                "observer": "Agent",
+                "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
+                "channelType": "playtest"
+              }
+            },
+            "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
+            "spellName": "Starter",
+            "publicVariables": "[]"
+          },
+          "isInput": true,
+          "outputs": [],
+          "success": false,
+          "useData": true,
+          "inputName": "Default",
+          "inputType": "Default",
+          "socketKey": "9d61118c-3c5a-4379-9dae-41965e56207f",
+          "useDefault": false,
+          "useTrigger": true,
+          "dataControls": {
+            "inputType": {
+              "expanded": true
+            }
+          },
+          "defaultValue": "Hello world",
+          "playtestToggle": {
+            "outputs": [],
+            "receivePlaytest": false
+          }
+        },
+        "name": "Input",
+        "inputs": {},
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 525,
+                "input": "event"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 529,
+                "input": "event"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 497,
+                "input": "event"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2552,
+                "input": "event"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 525,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -3904,
+          -1536
+        ]
+      },
+      "497": {
+        "id": 497,
+        "data": {
+          "type": "task",
+          "success": false,
+          "dataControls": {
+            "type": {
+              "expanded": true
+            }
+          }
+        },
+        "name": "Create Task",
+        "inputs": {
+          "event": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 232,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3246,
+                "output": "trigger"
+              }
+            ]
+          },
+          "objective": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3246,
+                "output": "result"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "task": {
+            "connections": []
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 550,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -2192,
+          -1552
+        ]
+      },
+      "525": {
+        "id": 525,
+        "data": {
+          "success": false,
+          "socketKey": "d2fad911-891f-4dd0-a9dd-80a74b62c910"
+        },
+        "name": "Event Destructure",
+        "inputs": {
+          "event": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 232,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 232,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "client": {
+            "connections": []
+          },
+          "sender": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 528,
+                "input": "user"
+              }
+            ]
+          },
+          "agentId": {
+            "connections": []
+          },
+          "channel": {
+            "connections": []
+          },
+          "content": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3246,
+                "input": "input"
+              }
+            ]
+          },
+          "rawData": {
+            "connections": []
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 529,
+                "input": "trigger"
+              }
+            ]
+          },
+          "entities": {
+            "connections": []
+          },
+          "observer": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 528,
+                "input": "agent"
+              }
+            ]
+          },
+          "connector": {
+            "connections": []
+          },
+          "embedding": {
+            "connections": []
+          },
+          "projectId": {
+            "connections": []
+          },
+          "channelType": {
+            "connections": []
+          }
+        },
+        "position": [
+          -3616,
+          -1552
+        ]
+      },
+      "528": {
+        "id": 528,
+        "data": {
+          "inputs": [
+            {
+              "name": "agent",
+              "taskType": "output",
+              "socketKey": "agent",
+              "socketType": "anySocket",
+              "connectionType": "input"
+            },
+            {
+              "name": "user",
+              "taskType": "output",
+              "socketKey": "user",
+              "socketType": "anySocket",
+              "connectionType": "input"
+            }
+          ],
+          "fewshot": "{{agent}} has all of the capabilities of a human assistant, including responding to requests thoughtfully, thinking, planning, etc.\n\n[TASK EXAMPLES]\n{{user}}: Hey how are you?\n{{agent}}: {{user}} is asking me a question. I should respond.\n\n{{user}}: Hello\n{{agent}}: {{user}} is greeting me. I should also greet them.\n\n{{user}}: Hey there\n{{agent}}: Hello!\n{{user}}: Can you help me solve a bug?\n{{agent}}: {{user}} is asking me to solve a bug, probably in their code. I should let them know that I can help.\n\n{{user}}: Can you tell me what's on my calendar today?\n{{agent}}: {{user}} wants me to check their calendar and summarize when and what is happening today.\n\n[TASK DESCRIPTION]\nBased on {{user}}'s input, write a user story for {{agent}} that highlights the user's need and how {{agent}} can help them. The response should start with \"{{user}} is\" and focus on what {{agent}} should do. The response should be brief.",
+          "success": false,
+          "dataControls": {
+            "inputs": {
+              "expanded": true
+            },
+            "fewshot": {
+              "expanded": true
+            }
+          }
+        },
+        "name": "Text Template",
+        "inputs": {
+          "user": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 525,
+                "output": "sender"
+              }
+            ]
+          },
+          "agent": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 525,
+                "output": "observer"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 529,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "prompt": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3246,
+                "input": "system"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3246,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -2864,
+          -1568
+        ]
+      },
+      "529": {
+        "id": 529,
+        "data": {
+          "name": "Recall Conversation",
+          "type": "conversation",
+          "success": false,
+          "max_count": "4",
+          "dataControls": {
+            "name": {
+              "expanded": true
+            },
+            "type": {
+              "expanded": true
+            },
+            "max_count": {
+              "expanded": true
+            }
+          }
+        },
+        "name": "Event Recall",
+        "inputs": {
+          "event": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 232,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 525,
+                "output": "trigger"
+              }
+            ]
+          },
+          "embedding": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "events": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3246,
+                "input": "conversation"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 528,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -3200,
+          -1568
+        ]
+      },
+      "550": {
+        "id": 550,
+        "data": {
+          "inputs": [
+            {
+              "name": "objective",
+              "taskType": "output",
+              "socketKey": "objective",
+              "socketType": "anySocket",
+              "connectionType": "input"
+            }
+          ],
+          "fewshot": "I'm starting a new task with the following objective: `{{objective}}`",
+          "success": false,
+          "dataControls": {
+            "inputs": {
+              "expanded": true
+            },
+            "fewshot": {
+              "expanded": true
+            }
+          }
+        },
+        "name": "Text Template",
+        "inputs": {
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 497,
+                "output": "trigger"
+              }
+            ]
+          },
+          "objective": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3246,
+                "output": "result"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "prompt": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2552,
+                "input": "input"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3247,
+                "input": "input"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2552,
+                "input": "trigger"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3247,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -1776,
+          -1488
+        ]
+      },
+      "2552": {
+        "id": 2552,
+        "data": {
+          "success": false,
+          "socketKey": "77fe25d1-07ba-4d25-a625-b1cd067c5d09",
+          "sendToPlaytest": true
+        },
+        "name": "Respond",
+        "inputs": {
+          "event": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 232,
+                "output": "output"
+              }
+            ]
+          },
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 550,
+                "output": "prompt"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 550,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "trigger": {
+            "connections": []
+          }
+        },
+        "position": [
+          -1472,
+          -1488
+        ]
+      },
+      "3246": {
+        "id": 3246,
+        "data": {
+          "model": "chat-bison-001",
+          "top_k": 50,
+          "top_p": 1,
+          "temperature": 0.5,
+          "stopSequences": ""
+        },
+        "name": "Generate Text",
+        "inputs": {
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 525,
+                "output": "content"
+              }
+            ]
+          },
+          "system": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 528,
+                "output": "prompt"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 528,
+                "output": "trigger"
+              }
+            ]
+          },
+          "examples": {
+            "connections": []
+          },
+          "conversation": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 529,
+                "output": "events"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "error": {
+            "connections": []
+          },
+          "result": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 497,
+                "input": "objective"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 550,
+                "input": "objective"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 497,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -2496,
+          -1552
+        ]
+      },
+      "3247": {
+        "id": 3247,
+        "data": {
+          "name": "Output - Default",
+          "isOutput": true,
+          "socketKey": "3e796186-0520-4301-85d3-fd3cf43a1928",
+          "sendToPlaytest": true
+        },
+        "name": "Output",
+        "inputs": {
+          "event": {
+            "connections": []
+          },
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 550,
+                "output": "prompt"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 550,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": []
+          },
+          "trigger": {
+            "connections": []
+          }
+        },
+        "position": [
+          -1472,
+          -1232
+        ]
+      }
+    },
+    "comments": [
+      {
+        "text": "handle user input",
+        "type": "frame",
+        "links": [
+          525,
+          232
+        ],
+        "width": 604,
+        "height": 570,
+        "position": [
+          -3939.586698838268,
+          -1592.747689295965
+        ]
+      },
+      {
+        "text": "create a new task objective",
+        "type": "frame",
+        "links": [
+          544,
+          3246,
+          497
+        ],
+        "width": 620,
+        "height": 318,
+        "position": [
+          -2554.1313203497652,
+          -1599.5957152127623
+        ]
+      },
+      {
+        "text": "let the user know the task has been started, and what the objective is",
+        "type": "frame",
+        "links": [
+          548,
+          2552,
+          550
+        ],
+        "width": 620,
+        "height": 282,
+        "position": [
+          -1825.2875876680835,
+          -1569.999542795034
+        ]
+      }
+    ]
+  }
+}

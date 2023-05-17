@@ -1,0 +1,386 @@
+{
+  "id": "09133a19-b0a5-4923-a784-9e2f1bca70c4",
+  "name": "ELIZA_TEST_Reasoning",
+  "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
+  "hash": "fc31b5ea0d26ae59b456daa2e4afaea4",
+  "createdAt": "1684283959997",
+  "updatedAt": null,
+  "graph": {
+    "id": "demo@0.1.0",
+    "nodes": {
+      "2035": {
+        "id": 2035,
+        "data": {},
+        "name": "Input",
+        "inputs": {},
+        "outputs": {
+          "output": {
+            "connections": []
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {},
+                "node": 3742,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -4208,
+          -912
+        ]
+      },
+      "2972": {
+        "id": 2972,
+        "data": {},
+        "name": "Spell",
+        "inputs": {
+          "trigger": {
+            "connections": [
+              {
+                "data": {},
+                "node": 3742,
+                "output": "trigger"
+              }
+            ]
+          },
+          "7a13c2d7-ba24-4cdc-b3b0-c9130a234079": {
+            "connections": [
+              {
+                "data": {},
+                "node": 3742,
+                "output": "output"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "trigger": {
+            "connections": [
+              {
+                "data": {},
+                "node": 3665,
+                "input": "trigger"
+              }
+            ]
+          },
+          "7580b31c-77b7-42d7-ac49-59675714a28a": {
+            "connections": [
+              {
+                "data": {},
+                "node": 3665,
+                "input": "input"
+              }
+            ]
+          }
+        },
+        "position": [
+          -3616,
+          -912
+        ]
+      },
+      "3664": {
+        "id": 3664,
+        "data": {},
+        "name": "Text Variable",
+        "inputs": {},
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {},
+                "node": 3742,
+                "input": "input"
+              }
+            ]
+          }
+        },
+        "position": [
+          -4224,
+          -1376
+        ]
+      },
+      "3665": {
+        "id": 3665,
+        "data": {},
+        "name": "Output",
+        "inputs": {
+          "event": {
+            "connections": []
+          },
+          "input": {
+            "connections": [
+              {
+                "data": {},
+                "node": 2972,
+                "output": "7580b31c-77b7-42d7-ac49-59675714a28a"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {},
+                "node": 2972,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": []
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {},
+                "node": 3743,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -3312,
+          -912
+        ]
+      },
+      "3742": {
+        "id": 3742,
+        "data": {},
+        "name": "JSON To Object",
+        "inputs": {
+          "input": {
+            "connections": [
+              {
+                "data": {},
+                "node": 3664,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {},
+                "node": 2035,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {},
+                "node": 2972,
+                "input": "7a13c2d7-ba24-4cdc-b3b0-c9130a234079"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {},
+                "node": 2972,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -3904,
+          -912
+        ]
+      },
+      "3743": {
+        "id": 3743,
+        "data": {},
+        "name": "JSON To Object",
+        "inputs": {
+          "input": {
+            "connections": [
+              {
+                "data": {},
+                "node": 3745,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {},
+                "node": 3665,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {},
+                "node": 3744,
+                "input": "7a13c2d7-ba24-4cdc-b3b0-c9130a234079"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {},
+                "node": 3744,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -3904,
+          -704
+        ]
+      },
+      "3744": {
+        "id": 3744,
+        "data": {},
+        "name": "Spell",
+        "inputs": {
+          "trigger": {
+            "connections": [
+              {
+                "data": {},
+                "node": 3743,
+                "output": "trigger"
+              }
+            ]
+          },
+          "7a13c2d7-ba24-4cdc-b3b0-c9130a234079": {
+            "connections": [
+              {
+                "data": {},
+                "node": 3743,
+                "output": "output"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "trigger": {
+            "connections": [
+              {
+                "data": {},
+                "node": 3746,
+                "input": "trigger"
+              }
+            ]
+          },
+          "7580b31c-77b7-42d7-ac49-59675714a28a": {
+            "connections": [
+              {
+                "data": {},
+                "node": 3746,
+                "input": "input"
+              }
+            ]
+          }
+        },
+        "position": [
+          -3616,
+          -704
+        ]
+      },
+      "3745": {
+        "id": 3745,
+        "data": {},
+        "name": "Text Variable",
+        "inputs": {},
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {},
+                "node": 3743,
+                "input": "input"
+              }
+            ]
+          }
+        },
+        "position": [
+          -4224,
+          -1200
+        ]
+      },
+      "3746": {
+        "id": 3746,
+        "data": {},
+        "name": "Output",
+        "inputs": {
+          "event": {
+            "connections": []
+          },
+          "input": {
+            "connections": [
+              {
+                "data": {},
+                "node": 3744,
+                "output": "7580b31c-77b7-42d7-ac49-59675714a28a"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {},
+                "node": 3744,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": []
+          },
+          "trigger": {
+            "connections": []
+          }
+        },
+        "position": [
+          -3312,
+          -704
+        ]
+      }
+    },
+    "comments": [
+      {
+        "text": "handle tasks from the queue",
+        "type": "frame",
+        "links": [
+          541,
+          2035
+        ],
+        "width": 332,
+        "height": 246,
+        "position": [
+          -4300.581878651518,
+          -982.4377693673492
+        ]
+      },
+      {
+        "text": "task loop",
+        "type": "inline",
+        "links": [],
+        "position": [
+          -4018.2910263821345,
+          -1068.2516380605557
+        ]
+      }
+    ]
+  }
+}

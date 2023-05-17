@@ -1,0 +1,72 @@
+{
+  "id": "d5073bc3-5edd-410a-987d-f425ed623bfe",
+  "name": "ELIZA_SKILL_complete",
+  "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
+  "hash": "b44b2d99f19a11bc6d4c2001030ad150",
+  "createdAt": "1684282832227",
+  "updatedAt": null,
+  "graph": {
+    "id": "demo@0.1.0",
+    "nodes": {
+      "1812": {
+        "id": 1812,
+        "data": {
+          "success": false
+        },
+        "name": "Complete Task",
+        "inputs": {
+          "task": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2036,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2036,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "task": {
+            "connections": []
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 1864,
+                "input": "trigger"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 1864,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -1088,
+          -128
+        ]
+      }
+    },
+    "comments": []
+  }
+}

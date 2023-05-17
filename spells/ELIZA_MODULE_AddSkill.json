@@ -1,0 +1,870 @@
+{
+  "id": "4913a6bd-d4fd-4655-9fe0-0dcf86c90f5e",
+  "name": "ELIZA_MODULE_AddSkill",
+  "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
+  "hash": "e62fdf10e4dbb748577954b40049c607",
+  "createdAt": "1684282832228",
+  "updatedAt": null,
+  "graph": {
+    "id": "demo@0.1.0",
+    "nodes": {
+      "232": {
+        "id": 232,
+        "data": {
+          "name": "Input - Default",
+          "text": {
+            "id": "2eb64348-adee-4118-bcca-19697ca3a16a",
+            "inputs": {
+              "Input - Default": {
+                "type": "playtest",
+                "client": "playtest",
+                "sender": "playtestSender",
+                "agentId": "preview",
+                "channel": "playtest",
+                "content": "testing",
+                "entities": [
+                  "playtestSender",
+                  "Agent"
+                ],
+                "observer": "Agent",
+                "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
+                "channelType": "playtest"
+              }
+            },
+            "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
+            "spellName": "Starter",
+            "publicVariables": "[]"
+          },
+          "isInput": true,
+          "outputs": [],
+          "success": false,
+          "useData": true,
+          "inputName": "Default",
+          "inputType": "Default",
+          "socketKey": "9d61118c-3c5a-4379-9dae-41965e56207f",
+          "useDefault": false,
+          "useTrigger": true,
+          "dataControls": {
+            "useData": {
+              "expanded": true
+            },
+            "inputName": {
+              "expanded": true
+            },
+            "inputType": {
+              "expanded": true
+            },
+            "useTrigger": {
+              "expanded": true
+            }
+          },
+          "defaultValue": "Hello world",
+          "playtestToggle": {
+            "outputs": [],
+            "receivePlaytest": false
+          }
+        },
+        "name": "Input",
+        "inputs": {},
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 525,
+                "input": "event"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3612,
+                "input": "event"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 525,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -3872,
+          -2128
+        ]
+      },
+      "525": {
+        "id": 525,
+        "data": {
+          "success": false,
+          "socketKey": "d2fad911-891f-4dd0-a9dd-80a74b62c910"
+        },
+        "name": "Event Destructure",
+        "inputs": {
+          "event": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 232,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 232,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "client": {
+            "connections": []
+          },
+          "sender": {
+            "connections": []
+          },
+          "agentId": {
+            "connections": []
+          },
+          "channel": {
+            "connections": []
+          },
+          "content": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3407,
+                "input": "input"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 666,
+                "input": "input"
+              }
+            ]
+          },
+          "rawData": {
+            "connections": []
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3407,
+                "input": "trigger"
+              }
+            ]
+          },
+          "entities": {
+            "connections": []
+          },
+          "observer": {
+            "connections": []
+          },
+          "connector": {
+            "connections": []
+          },
+          "embedding": {
+            "connections": []
+          },
+          "projectId": {
+            "connections": []
+          },
+          "channelType": {
+            "connections": []
+          }
+        },
+        "position": [
+          -3584,
+          -2128
+        ]
+      },
+      "661": {
+        "id": 661,
+        "data": {
+          "name": "Store skill",
+          "type": "skill",
+          "socketKey": null,
+          "dataControls": {
+            "name": {
+              "expanded": true
+            },
+            "type": {
+              "expanded": true
+            }
+          }
+        },
+        "name": "Store Document",
+        "inputs": {
+          "date": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 672,
+                "output": "string"
+              }
+            ]
+          },
+          "content": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3613,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3613,
+                "output": "trigger"
+              }
+            ]
+          },
+          "embedding": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 667,
+                "output": "embedding"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 719,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -1936,
+          -2000
+        ]
+      },
+      "666": {
+        "id": 666,
+        "data": {
+          "name": "Remove /addskill",
+          "match": "/addskill ",
+          "success": false,
+          "socketKey": null,
+          "dataControls": {
+            "name": {
+              "expanded": true
+            },
+            "match": {
+              "expanded": true
+            },
+            "replace": {
+              "expanded": true
+            }
+          }
+        },
+        "name": "Replace Text",
+        "inputs": {
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 525,
+                "output": "content"
+              }
+            ]
+          },
+          "match": {
+            "connections": []
+          },
+          "replace": {
+            "connections": []
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 672,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 667,
+                "input": "input"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 719,
+                "input": "document"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3613,
+                "input": "input"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 667,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -2848,
+          -2000
+        ]
+      },
+      "667": {
+        "id": 667,
+        "data": {
+          "error": false,
+          "model": "text-embedding-ada-002",
+          "success": false,
+          "socketKey": null
+        },
+        "name": "Create Text Embedding",
+        "inputs": {
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 666,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 666,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3613,
+                "input": "trigger"
+              }
+            ]
+          },
+          "embedding": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 661,
+                "input": "embedding"
+              }
+            ]
+          }
+        },
+        "position": [
+          -2560,
+          -2000
+        ]
+      },
+      "672": {
+        "id": 672,
+        "data": {
+          "success": false
+        },
+        "name": "Current Time",
+        "inputs": {
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3407,
+                "output": "true"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "string": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 661,
+                "input": "date"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 666,
+                "input": "trigger"
+              }
+            ]
+          },
+          "timestamp": {
+            "connections": []
+          }
+        },
+        "position": [
+          -3168,
+          -2112
+        ]
+      },
+      "717": {
+        "id": 717,
+        "data": {
+          "name": "Output - Default",
+          "success": false,
+          "isOutput": true,
+          "socketKey": "9630bdc7-6385-438c-8e54-075cafecc40f",
+          "sendToPlaytest": true
+        },
+        "name": "Output",
+        "inputs": {
+          "event": {
+            "connections": []
+          },
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 719,
+                "output": "prompt"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 719,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": []
+          },
+          "trigger": {
+            "connections": []
+          }
+        },
+        "position": [
+          -1232,
+          -1984
+        ]
+      },
+      "719": {
+        "id": 719,
+        "data": {
+          "inputs": [
+            {
+              "name": "document",
+              "taskType": "output",
+              "socketKey": "document",
+              "socketType": "anySocket",
+              "connectionType": "input"
+            }
+          ],
+          "fewshot": "Added skill. {{document}}",
+          "socketKey": null,
+          "dataControls": {
+            "inputs": {
+              "expanded": true
+            },
+            "fewshot": {
+              "expanded": true
+            }
+          }
+        },
+        "name": "Text Template",
+        "inputs": {
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 661,
+                "output": "trigger"
+              }
+            ]
+          },
+          "document": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 666,
+                "output": "output"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "prompt": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 717,
+                "input": "input"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3612,
+                "input": "input"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 717,
+                "input": "trigger"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3612,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -1616,
+          -2000
+        ]
+      },
+      "3407": {
+        "id": 3407,
+        "data": {
+          "name": "Contains /addskill",
+          "stringMaxLength": 0,
+          "stringMinLength": 0,
+          "matchBeginningString": "/addskill"
+        },
+        "name": "Text Rule Matcher",
+        "inputs": {
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 525,
+                "output": "content"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 525,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "true": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 672,
+                "input": "trigger"
+              }
+            ]
+          },
+          "false": {
+            "connections": []
+          }
+        },
+        "position": [
+          -3184,
+          -2336
+        ]
+      },
+      "3612": {
+        "id": 3612,
+        "data": {
+          "socketKey": "ebdfc111-c544-4943-8e3a-6bd071d58a11",
+          "sendToPlaytest": true
+        },
+        "name": "Respond",
+        "inputs": {
+          "event": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 232,
+                "output": "output"
+              }
+            ]
+          },
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 719,
+                "output": "prompt"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 719,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "trigger": {
+            "connections": []
+          }
+        },
+        "position": [
+          -1184,
+          -2336
+        ]
+      },
+      "3613": {
+        "id": 3613,
+        "data": {
+          "code": "\n// inputs: dictionary of inputs based on socket names\n// data: internal data of the node to read or write to nodes data state\nfunction worker({\n  input,\n}, data) {\n\n  // get the first word from the input string\n  const firstWord = input.split(' ')[0]\n  // get the rest of the input string\n  const restOfInput = input.split(' ').slice(1).join(' ')\n\n  const output = JSON.stringify({\n    name: firstWord,\n    description: restOfInput,\n  })\n\n  return {\n    output,\n  }\n}",
+          "inputs": [
+            {
+              "name": "input",
+              "taskType": "output",
+              "socketKey": "input",
+              "socketType": "anySocket",
+              "connectionType": "input"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "output",
+              "taskType": "output",
+              "socketKey": "output",
+              "socketType": "anySocket",
+              "connectionType": "output"
+            }
+          ]
+        },
+        "name": "Javascript",
+        "inputs": {
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 666,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 667,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 661,
+                "input": "content"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 661,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -2240,
+          -2000
+        ]
+      }
+    },
+    "comments": [
+      {
+        "text": "handle user input",
+        "type": "frame",
+        "links": [
+          525,
+          232
+        ],
+        "width": 604,
+        "height": 570,
+        "position": [
+          -3922.115866536411,
+          -2182.0379440552933
+        ]
+      },
+      {
+        "text": "user input",
+        "type": "inline",
+        "links": [
+          232
+        ],
+        "position": [
+          -3886.267679078678,
+          -2285.410199389942
+        ]
+      },
+      {
+        "text": "add skill",
+        "type": "frame",
+        "links": [
+          719,
+          661,
+          666,
+          667,
+          3613
+        ],
+        "width": 1580,
+        "height": 334,
+        "position": [
+          -2884.731200916797,
+          -2095.91121816255
+        ]
+      },
+      {
+        "text": "debug handlers",
+        "type": "inline",
+        "links": [],
+        "position": [
+          -2878.762846990302,
+          -2186.7942842900143
+        ]
+      }
+    ]
+  }
+}

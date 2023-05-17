@@ -1,0 +1,539 @@
+{
+  "id": "51b77dd4-d0c5-45c5-b4b1-e447ee19384c",
+  "name": "ELIZA_MODULE_Task_Reasoning",
+  "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
+  "hash": "ba164db2b2a641084dba849fd3660891",
+  "createdAt": "1684286052589",
+  "updatedAt": null,
+  "graph": {
+    "id": "demo@0.1.0",
+    "nodes": {
+      "724": {
+        "id": 724,
+        "data": {
+          "code": "\n// inputs: dictionary of inputs based on socket names\n// data: internal data of the node to read or write to nodes data state\nfunction worker({\n  task,\n}, data) {\n  // Keys of the object returned must match the names\n  // of your outputs you defined.\n  // To update the state, you must return the modified state.\n\nconst taskObjective = task.objective\n\nconst taskSteps = JSON.parse(task.steps)\n\n// TODO: Pull the reasoning, action and reflection\n\nconst lastSteps = taskSteps.map((step, idx) => {\n  return `Step ${idx}: ${step.reasoning} [ACTION]: ${step.action} [SKILL]: ${step.skill} [RESULT]: ${taskSteps.reflection}` + '\\n'\n})\n\nconst template = \n`[EXAMPLE NEXT STEPS]\nAssistant: I need to recall memories and facts that I know about User.\n\nAssistant: I need to plan out everything I need to do to complete my objective before I start.\n\nAssistant: I should respond to User to let them know that I've finished planning and I'm going to start working on their request.\n\nAssistant: I should check the user's calendar.\n\n[OBJECTIVE]\n${taskObjective}\n${taskSteps.length > 0 && `\n[PREVIOUS STEPS]\nBreak the task into steps and then think about how to complete each step.\n${lastSteps.join('\\n')}\n`}\n[NEXT STEP]\nDetermine what to do next. Your response should be in the first person, and should start with \"I should\".\n`\n\nconst input = taskSteps.length > 0 ?\n`What is the next step?` :\n`What is the first step?`\n\n  return {\n    prompt: template,\n    input\n  }\n}",
+          "name": "Format Prompt for Reasoning",
+          "inputs": [
+            {
+              "name": "task",
+              "taskType": "output",
+              "socketKey": "task",
+              "socketType": "anySocket",
+              "connectionType": "input"
+            }
+          ],
+          "outputs": [
+            {
+              "name": "input",
+              "taskType": "output",
+              "socketKey": "input",
+              "socketType": "anySocket",
+              "connectionType": "output"
+            },
+            {
+              "name": "prompt",
+              "taskType": "output",
+              "socketKey": "prompt",
+              "socketType": "anySocket",
+              "connectionType": "output"
+            }
+          ],
+          "success": false,
+          "dataControls": {
+            "code": {
+              "expanded": true
+            },
+            "name": {
+              "expanded": true
+            },
+            "inputs": {
+              "expanded": true
+            },
+            "outputs": {
+              "expanded": true
+            }
+          }
+        },
+        "name": "Javascript",
+        "inputs": {
+          "task": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2035,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3277,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 725,
+                "input": "input"
+              }
+            ]
+          },
+          "prompt": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 725,
+                "input": "system"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3276,
+                "input": "input"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3332,
+                "input": "string"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3276,
+                "input": "trigger"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3332,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -144,
+          144
+        ]
+      },
+      "725": {
+        "id": 725,
+        "data": {
+          "stop": "###",
+          "error": false,
+          "model": "gpt-3.5-turbo",
+          "top_p": 1,
+          "success": false,
+          "temperature": 0.5,
+          "presence_penalty": 0,
+          "frequency_penalty": 0
+        },
+        "name": "Generate Text",
+        "inputs": {
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 724,
+                "output": "input"
+              }
+            ]
+          },
+          "system": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 724,
+                "output": "prompt"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3276,
+                "output": "trigger"
+              }
+            ]
+          },
+          "conversation": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "error": {
+            "connections": []
+          },
+          "result": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2222,
+                "input": "input"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2222,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          272,
+          128
+        ]
+      },
+      "2035": {
+        "id": 2035,
+        "data": {
+          "name": "Input - Default",
+          "isInput": true,
+          "success": false,
+          "useData": true,
+          "inputName": "Default",
+          "inputType": "Default",
+          "socketKey": "7a13c2d7-ba24-4cdc-b3b0-c9130a234079",
+          "dataControls": {
+            "useData": {
+              "expanded": true
+            },
+            "inputName": {
+              "expanded": true
+            },
+            "inputType": {
+              "expanded": true
+            }
+          }
+        },
+        "name": "Input",
+        "inputs": {},
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 724,
+                "input": "task"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3277,
+                "input": "object"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3277,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -576,
+          176
+        ]
+      },
+      "2222": {
+        "id": 2222,
+        "data": {
+          "name": "Output - Default",
+          "isOutput": true,
+          "socketKey": "7580b31c-77b7-42d7-ac49-59675714a28a",
+          "sendToPlaytest": true
+        },
+        "name": "Output",
+        "inputs": {
+          "event": {
+            "connections": []
+          },
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 725,
+                "output": "result"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 725,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": []
+          },
+          "trigger": {
+            "connections": []
+          }
+        },
+        "position": [
+          592,
+          160
+        ]
+      },
+      "3276": {
+        "id": 3276,
+        "data": {
+          "socketKey": "b0df948c-bf68-4d83-9167-77675334d8e7",
+          "sendToPlaytest": true
+        },
+        "name": "Respond",
+        "inputs": {
+          "event": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3277,
+                "output": "eventData"
+              }
+            ]
+          },
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 724,
+                "output": "prompt"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 724,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 725,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          32,
+          -144
+        ]
+      },
+      "3277": {
+        "id": 3277,
+        "data": {
+          "outputs": [
+            {
+              "name": "eventData",
+              "taskType": "output",
+              "socketKey": "eventData",
+              "socketType": "anySocket",
+              "connectionType": "output"
+            }
+          ]
+        },
+        "name": "Get Values From Object",
+        "inputs": {
+          "object": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2035,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2035,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 724,
+                "input": "trigger"
+              }
+            ]
+          },
+          "eventData": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3276,
+                "input": "event"
+              }
+            ]
+          }
+        },
+        "position": [
+          -352,
+          -176
+        ]
+      },
+      "3332": {
+        "id": 3332,
+        "data": {
+          "name": "!!!!!!! REASONING"
+        },
+        "name": "Log",
+        "inputs": {
+          "string": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 724,
+                "output": "prompt"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 724,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {},
+        "position": [
+          368,
+          -160
+        ]
+      }
+    },
+    "comments": [
+      {
+        "text": "handle tasks from the queue",
+        "type": "frame",
+        "links": [
+          541,
+          2035
+        ],
+        "width": 332,
+        "height": 246,
+        "position": [
+          -633.615847391829,
+          102.74856237660674
+        ]
+      },
+      {
+        "text": "task loop",
+        "type": "inline",
+        "links": [],
+        "position": [
+          -624.572129753738,
+          5.333695039752683
+        ]
+      },
+      {
+        "text": "Reasoning",
+        "type": "frame",
+        "links": [
+          725,
+          724
+        ],
+        "width": 700,
+        "height": 282,
+        "position": [
+          -205.46747889411245,
+          70.78883961560393
+        ]
+      }
+    ]
+  }
+}
