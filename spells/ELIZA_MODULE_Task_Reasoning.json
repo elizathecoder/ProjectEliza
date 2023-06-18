@@ -1,9 +1,9 @@
 {
-  "id": "51b77dd4-d0c5-45c5-b4b1-e447ee19384c",
+  "id": "9ca39d24-da3a-4ea2-bbc5-5845c04be11e",
   "name": "ELIZA_MODULE_Task_Reasoning",
   "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
-  "hash": "ba164db2b2a641084dba849fd3660891",
-  "createdAt": "1684286052589",
+  "hash": "8f1673f379793bdec2e9b0ef4b4ca6f9",
+  "createdAt": "1686210970868",
   "updatedAt": null,
   "graph": {
     "id": "demo@0.1.0",
@@ -97,13 +97,6 @@
                 "data": {
                   "hello": "hello"
                 },
-                "node": 725,
-                "input": "system"
-              },
-              {
-                "data": {
-                  "hello": "hello"
-                },
                 "node": 3276,
                 "input": "input"
               },
@@ -113,6 +106,13 @@
                 },
                 "node": 3332,
                 "input": "string"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 725,
+                "input": "system"
               }
             ]
           },
@@ -136,7 +136,7 @@
           }
         },
         "position": [
-          -144,
+          -128,
           144
         ]
       },
@@ -145,10 +145,12 @@
         "data": {
           "stop": "###",
           "error": false,
-          "model": "gpt-3.5-turbo",
+          "model": "chat-bison-001",
+          "top_k": 50,
           "top_p": 1,
           "success": false,
           "temperature": 0.5,
+          "stopSequences": "",
           "presence_penalty": 0,
           "frequency_penalty": 0
         },
@@ -187,6 +189,9 @@
               }
             ]
           },
+          "examples": {
+            "connections": []
+          },
           "conversation": {
             "connections": []
           }
@@ -219,8 +224,8 @@
           }
         },
         "position": [
-          272,
-          128
+          240,
+          80
         ]
       },
       "2035": {
@@ -263,6 +268,13 @@
                 },
                 "node": 3277,
                 "input": "object"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2222,
+                "input": "event"
               }
             ]
           },
@@ -279,8 +291,8 @@
           }
         },
         "position": [
-          -576,
-          176
+          -592,
+          192
         ]
       },
       "2222": {
@@ -294,7 +306,15 @@
         "name": "Output",
         "inputs": {
           "event": {
-            "connections": []
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2035,
+                "output": "output"
+              }
+            ]
           },
           "input": {
             "connections": [
@@ -328,13 +348,14 @@
           }
         },
         "position": [
-          592,
+          816,
           160
         ]
       },
       "3276": {
         "id": 3276,
         "data": {
+          "success": false,
           "socketKey": "b0df948c-bf68-4d83-9167-77675334d8e7",
           "sendToPlaytest": true
         },
@@ -388,8 +409,8 @@
           }
         },
         "position": [
-          32,
-          -144
+          256,
+          -240
         ]
       },
       "3277": {
@@ -403,7 +424,8 @@
               "socketType": "anySocket",
               "connectionType": "output"
             }
-          ]
+          ],
+          "success": false
         },
         "name": "Get Values From Object",
         "inputs": {
@@ -456,13 +478,14 @@
         },
         "position": [
           -352,
-          -176
+          -96
         ]
       },
       "3332": {
         "id": 3332,
         "data": {
-          "name": "!!!!!!! REASONING"
+          "name": "!!!!!!! REASONING",
+          "success": false
         },
         "name": "Log",
         "inputs": {
@@ -491,8 +514,8 @@
         },
         "outputs": {},
         "position": [
-          368,
-          -160
+          288,
+          448
         ]
       }
     },
@@ -507,8 +530,8 @@
         "width": 332,
         "height": 246,
         "position": [
-          -633.615847391829,
-          102.74856237660674
+          -635.9367363567571,
+          89.04897968994614
         ]
       },
       {
@@ -516,8 +539,8 @@
         "type": "inline",
         "links": [],
         "position": [
-          -624.572129753738,
-          5.333695039752683
+          -632.572129753738,
+          -2.6663049602473166
         ]
       },
       {
@@ -530,8 +553,8 @@
         "width": 700,
         "height": 282,
         "position": [
-          -205.46747889411245,
-          70.78883961560393
+          -213.70661025593876,
+          62.78883961560393
         ]
       }
     ]

@@ -1,9 +1,9 @@
 {
-  "id": "4aca6201-3794-42f1-9329-5c27d4f26f7f",
+  "id": "b8913333-5f50-48a1-9eba-fbb1fc1a4a61",
   "name": "ELIZA_SKILL_respond",
   "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
   "hash": "42f273beb3ab4389ddf894fbf04667cb",
-  "createdAt": "1684282832523",
+  "createdAt": "1686210970868",
   "updatedAt": null,
   "graph": {
     "id": "demo@0.1.0",

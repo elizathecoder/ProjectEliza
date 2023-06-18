@@ -1,10 +1,10 @@
 {
-  "id": "6d97a345-6bdd-434a-b925-69d81d3e5c26",
+  "id": "3c1f25d7-0ae0-4166-98e7-89615a7984c1",
   "name": "ELIZA_INPUT_TaskHandler",
   "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
-  "hash": "a2e4c8bda85dcca2cecbbc7d3319cd43",
-  "createdAt": "1684282832227",
-  "updatedAt": "1684285776937",
+  "hash": "0213121ca2d13e688170acfec790a538",
+  "createdAt": "1686210970868",
+  "updatedAt": null,
   "graph": {
     "id": "demo@0.1.0",
     "nodes": {
@@ -17,15 +17,7 @@
         "name": "Finish Task Step",
         "inputs": {
           "skill": {
-            "connections": [
-              {
-                "data": {
-                  "hello": "hello"
-                },
-                "node": 2978,
-                "output": "28318dec-662d-4fc0-ba97-53d2cf792edc"
-              }
-            ]
+            "connections": []
           },
           "result": {
             "connections": [
@@ -119,8 +111,8 @@
           }
         },
         "position": [
-          -1600,
-          -928
+          1040,
+          -32
         ]
       },
       "1140": {
@@ -211,8 +203,8 @@
           }
         },
         "position": [
-          -1904,
-          -912
+          736,
+          16
         ]
       },
       "1535": {
@@ -300,8 +292,8 @@
           }
         },
         "position": [
-          -2768,
-          -912
+          -144,
+          16
         ]
       },
       "2035": {
@@ -376,14 +368,15 @@
           }
         },
         "position": [
-          -3968,
-          -912
+          -1344,
+          -48
         ]
       },
       "2972": {
         "id": 2972,
         "data": {
           "name": "ELIZA_MODULE_Task_Reasoning",
+          "error": false,
           "graph": {
             "id": "demo@0.1.0",
             "nodes": {
@@ -804,7 +797,6 @@
               "connectionType": "output"
             }
           ],
-          "spellId": "3d2d8583-a2eb-4304-acb1-eae80d7fa058",
           "success": false,
           "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
           "publicVariables": {}
@@ -859,13 +851,6 @@
                 "data": {
                   "hello": "hello"
                 },
-                "node": 2978,
-                "input": "7a13c2d7-ba24-4cdc-b3b0-c9130a234079"
-              },
-              {
-                "data": {
-                  "hello": "hello"
-                },
                 "node": 1535,
                 "input": "content"
               },
@@ -875,13 +860,20 @@
                 },
                 "node": 735,
                 "input": "reasoning"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 2978,
+                "input": "7a13c2d7-ba24-4cdc-b3b0-c9130a234079"
               }
             ]
           }
         },
         "position": [
-          -3648,
-          -912
+          -1008,
+          16
         ]
       },
       "2978": {
@@ -963,7 +955,7 @@
               "726": {
                 "id": 726,
                 "data": {
-                  "model": "text-embedding-ada-002",
+                  "model": "embedding-gecko-001",
                   "success": false
                 },
                 "name": "Create Text Embedding",
@@ -992,6 +984,9 @@
                   }
                 },
                 "outputs": {
+                  "error": {
+                    "connections": []
+                  },
                   "trigger": {
                     "connections": [
                       {
@@ -1016,7 +1011,7 @@
                   }
                 },
                 "position": [
-                  -3152,
+                  -3168,
                   -784
                 ]
               },
@@ -1263,84 +1258,7 @@
                         "data": {
                           "hello": "hello"
                         },
-                        "node": 1805,
-                        "input": "spellName"
-                      }
-                    ]
-                  },
-                  "trigger": {
-                    "connections": [
-                      {
-                        "data": {
-                          "hello": "hello"
-                        },
-                        "node": 1805,
-                        "input": "trigger"
-                      }
-                    ]
-                  }
-                },
-                "position": [
-                  -2592,
-                  -208
-                ]
-              },
-              "1805": {
-                "id": 1805,
-                "data": {
-                  "inputs": [
-                    {
-                      "name": "spellName",
-                      "taskType": "output",
-                      "socketKey": "spellName",
-                      "socketType": "anySocket",
-                      "connectionType": "input"
-                    }
-                  ],
-                  "fewshot": "ELIZA_SKILL_{{spellName}}",
-                  "success": false,
-                  "dataControls": {
-                    "inputs": {
-                      "expanded": true
-                    },
-                    "fewshot": {
-                      "expanded": true
-                    }
-                  }
-                },
-                "name": "Text Template",
-                "inputs": {
-                  "trigger": {
-                    "connections": [
-                      {
-                        "data": {
-                          "hello": "hello"
-                        },
-                        "node": 954,
-                        "output": "trigger"
-                      }
-                    ]
-                  },
-                  "spellName": {
-                    "connections": [
-                      {
-                        "data": {
-                          "hello": "hello"
-                        },
-                        "node": 954,
-                        "output": "name"
-                      }
-                    ]
-                  }
-                },
-                "outputs": {
-                  "prompt": {
-                    "connections": [
-                      {
-                        "data": {
-                          "hello": "hello"
-                        },
-                        "node": 2288,
+                        "node": 3118,
                         "input": "input"
                       }
                     ]
@@ -1351,15 +1269,15 @@
                         "data": {
                           "hello": "hello"
                         },
-                        "node": 2288,
+                        "node": 3118,
                         "input": "trigger"
                       }
                     ]
                   }
                 },
                 "position": [
-                  -2256,
-                  -784
+                  -2592,
+                  -208
                 ]
               },
               "2035": {
@@ -1411,16 +1329,16 @@
                   }
                 },
                 "position": [
-                  -3584,
+                  -3456,
                   -784
                 ]
               },
-              "2288": {
-                "id": 2288,
+              "3118": {
+                "id": 3118,
                 "data": {
                   "name": "Output - Default",
                   "isOutput": true,
-                  "socketKey": "28318dec-662d-4fc0-ba97-53d2cf792edc",
+                  "socketKey": "5fee3b20-b8e7-42d9-8b02-ee5600c0e680",
                   "sendToPlaytest": true
                 },
                 "name": "Output",
@@ -1434,8 +1352,8 @@
                         "data": {
                           "hello": "hello"
                         },
-                        "node": 1805,
-                        "output": "prompt"
+                        "node": 954,
+                        "output": "name"
                       }
                     ]
                   },
@@ -1445,7 +1363,7 @@
                         "data": {
                           "hello": "hello"
                         },
-                        "node": 1805,
+                        "node": 954,
                         "output": "trigger"
                       }
                     ]
@@ -1460,7 +1378,7 @@
                   }
                 },
                 "position": [
-                  -1872,
+                  -2304,
                   -784
                 ]
               }
@@ -1482,13 +1400,13 @@
             {
               "name": "Output - Default",
               "taskType": "output",
-              "socketKey": "28318dec-662d-4fc0-ba97-53d2cf792edc",
+              "socketKey": "5fee3b20-b8e7-42d9-8b02-ee5600c0e680",
               "socketType": "anySocket",
               "useSocketName": true,
               "connectionType": "output"
             }
           ],
-          "spellId": "ac5f1342-1680-442f-b53c-abefe3c47348",
+          "spellId": "dcaf43d7-9fe8-41b6-be30-ae3062d6e3f2",
           "success": false,
           "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
           "publicVariables": {}
@@ -1530,35 +1448,21 @@
               }
             ]
           },
-          "28318dec-662d-4fc0-ba97-53d2cf792edc": {
+          "5fee3b20-b8e7-42d9-8b02-ee5600c0e680": {
             "connections": [
-              {
-                "data": {
-                  "hello": "hello"
-                },
-                "node": 2980,
-                "input": "skillName"
-              },
               {
                 "data": {
                   "hello": "hello"
                 },
                 "node": 3067,
                 "input": "spellName"
-              },
-              {
-                "data": {
-                  "hello": "hello"
-                },
-                "node": 735,
-                "input": "skill"
               }
             ]
           }
         },
         "position": [
-          -3344,
-          -912
+          -720,
+          16
         ]
       },
       "2979": {
@@ -2098,7 +2002,6 @@
               "connectionType": "output"
             }
           ],
-          "spellId": "387d5c2b-4147-4c1e-8689-953708ac6daf",
           "success": false,
           "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
           "publicVariables": {}
@@ -2153,8 +2056,8 @@
           }
         },
         "position": [
-          -2192,
-          -912
+          448,
+          16
         ]
       },
       "2980": {
@@ -2228,15 +2131,7 @@
             ]
           },
           "skillName": {
-            "connections": [
-              {
-                "data": {
-                  "hello": "hello"
-                },
-                "node": 2978,
-                "output": "28318dec-662d-4fc0-ba97-53d2cf792edc"
-              }
-            ]
+            "connections": []
           },
           "skillResult": {
             "connections": [
@@ -2275,8 +2170,8 @@
           }
         },
         "position": [
-          -2480,
-          -912
+          160,
+          16
         ]
       },
       "3067": {
@@ -2314,7 +2209,7 @@
                   "hello": "hello"
                 },
                 "node": 2978,
-                "output": "28318dec-662d-4fc0-ba97-53d2cf792edc"
+                "output": "5fee3b20-b8e7-42d9-8b02-ee5600c0e680"
               }
             ]
           }
@@ -2344,8 +2239,8 @@
           }
         },
         "position": [
-          -3056,
-          -912
+          -432,
+          16
         ]
       },
       "3356": {
@@ -2393,8 +2288,8 @@
           }
         },
         "position": [
-          -1312,
-          -928
+          1328,
+          -32
         ]
       }
     },
@@ -2409,8 +2304,8 @@
         "width": 332,
         "height": 246,
         "position": [
-          -4039.759037237079,
-          -965.9262089680491
+          -1399.7590372370792,
+          -125.92620896804908
         ]
       },
       {
@@ -2418,19 +2313,8 @@
         "type": "inline",
         "links": [],
         "position": [
-          -4018.2910263821345,
-          -1068.2516380605557
-        ]
-      },
-      {
-        "text": "finish task step",
-        "type": "inline",
-        "links": [
-          735
-        ],
-        "position": [
-          -1583.1448216724557,
-          -1016.9477164315736
+          -1378.2910263821345,
+          -228.2516380605557
         ]
       }
     ]

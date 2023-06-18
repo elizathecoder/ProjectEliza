@@ -1,9 +1,9 @@
 {
-  "id": "d5073bc3-5edd-410a-987d-f425ed623bfe",
+  "id": "621d3061-b91c-4739-834d-b088a5683f60",
   "name": "ELIZA_SKILL_complete",
   "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
-  "hash": "b44b2d99f19a11bc6d4c2001030ad150",
-  "createdAt": "1684282832227",
+  "hash": "105d7b722743ff9c1c1706afdd9c33f8",
+  "createdAt": "1686210970868",
   "updatedAt": null,
   "graph": {
     "id": "demo@0.1.0",
@@ -21,7 +21,7 @@
                 "data": {
                   "hello": "hello"
                 },
-                "node": 2036,
+                "node": 5021,
                 "output": "output"
               }
             ]
@@ -32,7 +32,7 @@
                 "data": {
                   "hello": "hello"
                 },
-                "node": 2036,
+                "node": 5021,
                 "output": "trigger"
               }
             ]
@@ -43,26 +43,51 @@
             "connections": []
           },
           "trigger": {
+            "connections": []
+          }
+        },
+        "position": [
+          -1088,
+          -128
+        ]
+      },
+      "5021": {
+        "id": 5021,
+        "data": {
+          "name": "Input - Default",
+          "isInput": true,
+          "useData": true,
+          "inputName": "Default",
+          "socketKey": "bbbc8d0b-6935-4fbf-85a6-9429bc057282"
+        },
+        "name": "Input",
+        "inputs": {},
+        "outputs": {
+          "output": {
             "connections": [
               {
                 "data": {
                   "hello": "hello"
                 },
-                "node": 1864,
-                "input": "trigger"
-              },
+                "node": 1812,
+                "input": "task"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
               {
                 "data": {
                   "hello": "hello"
                 },
-                "node": 1864,
+                "node": 1812,
                 "input": "trigger"
               }
             ]
           }
         },
         "position": [
-          -1088,
+          -1424,
           -128
         ]
       }

@@ -1,10 +1,10 @@
 {
-  "id": "1c96b29e-b3ea-4053-8e47-34ffb341a065",
+  "id": "7529dba4-4e27-4407-870e-0dc27a81c6d6",
   "name": "ELIZA_INTENT_conversation",
   "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
-  "hash": "da50ad718864366b673ce968710fb99e",
-  "createdAt": "1684283959990",
-  "updatedAt": "1684286419559",
+  "hash": "b9281f85833bcfff248176276d312996",
+  "createdAt": "1686210970868",
+  "updatedAt": null,
   "graph": {
     "id": "demo@0.1.0",
     "nodes": {
@@ -34,6 +34,20 @@
                   "hello": "hello"
                 },
                 "node": 3671,
+                "input": "event"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3696,
+                "input": "event"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 233,
                 "input": "event"
               }
             ]
@@ -66,7 +80,15 @@
         "name": "Output",
         "inputs": {
           "event": {
-            "connections": []
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 232,
+                "output": "output"
+              }
+            ]
           },
           "input": {
             "connections": [
@@ -100,8 +122,8 @@
           }
         },
         "position": [
-          912,
-          -16
+          944,
+          64
         ]
       },
       "494": {
@@ -317,6 +339,9 @@
         },
         "name": "Event Recall",
         "inputs": {
+          "type": {
+            "connections": []
+          },
           "event": {
             "connections": [
               {
@@ -381,7 +406,15 @@
         "name": "Respond",
         "inputs": {
           "event": {
-            "connections": []
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 232,
+                "output": "output"
+              }
+            ]
           },
           "input": {
             "connections": [

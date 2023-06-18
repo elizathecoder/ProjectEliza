@@ -1,0 +1,507 @@
+{
+  "id": "74f4929a-c680-48dd-a37e-bd2e1bf7c2fa",
+  "name": "ELIZA_INTENT_leavevoice",
+  "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
+  "hash": "754ac42bfcf48d304e261905aaec6c26",
+  "createdAt": "1686210970868",
+  "updatedAt": "1687076341495",
+  "graph": {
+    "id": "demo@0.1.0",
+    "nodes": {
+      "232": {
+        "id": 232,
+        "data": {
+          "name": "Input - Default",
+          "isInput": true,
+          "success": false,
+          "useData": true,
+          "inputName": "Default",
+          "socketKey": "607e39a9-4728-433a-8497-8aad4c648615"
+        },
+        "name": "Input",
+        "inputs": {},
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 6870,
+                "input": "event"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 6876,
+                "input": "input"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 6870,
+                "input": "trigger"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 6876,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -624,
+          -16
+        ]
+      },
+      "233": {
+        "id": 233,
+        "data": {
+          "name": "Output - Default",
+          "success": false,
+          "isOutput": true,
+          "socketKey": "7315dd07-a515-48b4-8397-d4e52ebf2dd0",
+          "sendToPlaytest": true
+        },
+        "name": "Output",
+        "inputs": {
+          "event": {
+            "connections": []
+          },
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 6872,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 6872,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": []
+          },
+          "trigger": {
+            "connections": []
+          }
+        },
+        "position": [
+          640,
+          16
+        ]
+      },
+      "6870": {
+        "id": 6870,
+        "data": {
+          "success": false
+        },
+        "name": "Leave Voice Channels In Server",
+        "inputs": {
+          "event": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 232,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 232,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "left": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 6871,
+                "input": "input"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 6871,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -304,
+          -16
+        ]
+      },
+      "6871": {
+        "id": 6871,
+        "data": {
+          "success": false
+        },
+        "name": "Is Variable True",
+        "inputs": {
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 6870,
+                "output": "left"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 6870,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "true": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 6872,
+                "input": "true trigger"
+              }
+            ]
+          },
+          "false": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 6872,
+                "input": "false trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          0,
+          0
+        ]
+      },
+      "6872": {
+        "id": 6872,
+        "data": {
+          "inputs": [
+            {
+              "name": "true trigger",
+              "taskType": "option",
+              "socketKey": "true trigger",
+              "socketType": "triggerSocket",
+              "connectionType": "input"
+            },
+            {
+              "name": "true data",
+              "taskType": "output",
+              "socketKey": "true data",
+              "socketType": "anySocket",
+              "connectionType": "input"
+            },
+            {
+              "name": "false trigger",
+              "taskType": "option",
+              "socketKey": "false trigger",
+              "socketType": "triggerSocket",
+              "connectionType": "input"
+            },
+            {
+              "name": "false data",
+              "taskType": "output",
+              "socketKey": "false data",
+              "socketType": "anySocket",
+              "connectionType": "input"
+            }
+          ],
+          "success": false
+        },
+        "name": "Exclusive Gate",
+        "inputs": {
+          "true data": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 6874,
+                "output": "output"
+              }
+            ]
+          },
+          "false data": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 6873,
+                "output": "output"
+              }
+            ]
+          },
+          "true trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 6871,
+                "output": "true"
+              }
+            ]
+          },
+          "false trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 6871,
+                "output": "false"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 233,
+                "input": "input"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 6875,
+                "input": "input"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 233,
+                "input": "trigger"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 6875,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          320,
+          -128
+        ]
+      },
+      "6873": {
+        "id": 6873,
+        "data": {
+          "fewshot": "I'm not in any voice channels on this server right now.",
+          "success": false,
+          "isPublic": false,
+          "socketKey": null
+        },
+        "name": "Text Variable",
+        "inputs": {},
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 6872,
+                "input": "false data"
+              }
+            ]
+          }
+        },
+        "position": [
+          -16,
+          -208
+        ]
+      },
+      "6874": {
+        "id": 6874,
+        "data": {
+          "fewshot": "Okay, I left the voice chat.",
+          "success": false,
+          "isPublic": false,
+          "socketKey": null
+        },
+        "name": "Text Variable",
+        "inputs": {},
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 6872,
+                "input": "true data"
+              }
+            ]
+          }
+        },
+        "position": [
+          -16,
+          -112
+        ]
+      },
+      "6875": {
+        "id": 6875,
+        "data": {
+          "success": false,
+          "socketKey": "92cc3f3a-9a46-41cb-ad8b-4c9530a0558f",
+          "sendToPlaytest": true
+        },
+        "name": "Respond",
+        "inputs": {
+          "event": {
+            "connections": []
+          },
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 6872,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 6872,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "trigger": {
+            "connections": []
+          }
+        },
+        "position": [
+          640,
+          -224
+        ]
+      },
+      "6876": {
+        "id": 6876,
+        "data": {
+          "socketKey": "442b9f7d-e7f6-4210-a3b5-8afccfe0bb66",
+          "sendToPlaytest": true
+        },
+        "name": "Respond",
+        "inputs": {
+          "event": {
+            "connections": []
+          },
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 232,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 232,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "trigger": {
+            "connections": []
+          }
+        },
+        "position": [
+          -295.7269839791254,
+          -227.59825740296924
+        ]
+      }
+    },
+    "comments": []
+  }
+}

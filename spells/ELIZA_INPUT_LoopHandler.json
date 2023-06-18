@@ -1,10 +1,10 @@
 {
-  "id": "bc1fe9e5-b482-4599-9f00-f7562400db02",
+  "id": "e7fad5a8-e257-4b1f-b99a-fb6b206af33a",
   "name": "ELIZA_INPUT_LoopHandler",
   "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
   "hash": "cfe86a88ea330ed96ba8aaac9fd46242",
-  "createdAt": "1684285479222",
-  "updatedAt": "1684285828117",
+  "createdAt": "1686210970868",
+  "updatedAt": null,
   "graph": {
     "id": "demo@0.1.0",
     "nodes": {

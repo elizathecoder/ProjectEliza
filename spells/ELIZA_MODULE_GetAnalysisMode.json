@@ -1,0 +1,611 @@
+{
+  "id": "2394e6a9-eabd-4d24-b8b9-6ef50c6c6496",
+  "name": "ELIZA_MODULE_GetAnalysisMode",
+  "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
+  "hash": "24e488c4d6f8452b49ff4af3af3df1a8",
+  "createdAt": "1686210970868",
+  "updatedAt": "1686947673097",
+  "graph": {
+    "id": "demo@0.1.0",
+    "nodes": {
+      "232": {
+        "id": 232,
+        "data": {
+          "name": "Input - Default",
+          "isInput": true,
+          "success": false,
+          "useData": true,
+          "inputName": "Default",
+          "socketKey": "6e58ab08-a50e-450e-8512-095d1c99ae81"
+        },
+        "name": "Input",
+        "inputs": {},
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5049,
+                "input": "event"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5049,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -1344,
+          368
+        ]
+      },
+      "5049": {
+        "id": 5049,
+        "data": {
+          "name": "analysis mode on?",
+          "type": "analysis",
+          "error": false,
+          "success": false,
+          "max_count": "1"
+        },
+        "name": "Event Recall",
+        "inputs": {
+          "type": {
+            "connections": []
+          },
+          "event": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 232,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 232,
+                "output": "trigger"
+              }
+            ]
+          },
+          "embedding": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "events": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5051,
+                "input": "array"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5051,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -1040,
+          368
+        ]
+      },
+      "5051": {
+        "id": 5051,
+        "data": {
+          "element": 0,
+          "success": false
+        },
+        "name": "Get Value From Array",
+        "inputs": {
+          "array": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5049,
+                "output": "events"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5049,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5052,
+                "input": "object"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5054,
+                "input": "input"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5054,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -1040,
+          608
+        ]
+      },
+      "5052": {
+        "id": 5052,
+        "data": {
+          "outputs": [
+            {
+              "name": "content",
+              "taskType": "output",
+              "socketKey": "content",
+              "socketType": "anySocket",
+              "connectionType": "output"
+            }
+          ]
+        },
+        "name": "Get Values From Object",
+        "inputs": {
+          "object": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5051,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5054,
+                "output": "false"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "content": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5056,
+                "input": "input"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5056,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -1040,
+          976
+        ]
+      },
+      "5054": {
+        "id": 5054,
+        "data": {
+          "success": false
+        },
+        "name": "Is Null Or Undefined",
+        "inputs": {
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5051,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5051,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "true": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5061,
+                "input": "false trigger"
+              }
+            ]
+          },
+          "false": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5052,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -1056,
+          784
+        ]
+      },
+      "5056": {
+        "id": 5056,
+        "data": {
+          "name": "is true or on",
+          "stringMaxLength": 0,
+          "stringMinLength": 0,
+          "matchBeginningString": "true, on"
+        },
+        "name": "Text Rule Matcher",
+        "inputs": {
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5052,
+                "output": "content"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5052,
+                "output": "trigger"
+              }
+            ]
+          },
+          "matchAny": {
+            "connections": []
+          },
+          "matchEnd": {
+            "connections": []
+          },
+          "matchBeginning": {
+            "connections": []
+          }
+        },
+        "outputs": {
+          "true": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5061,
+                "input": "true trigger"
+              }
+            ]
+          },
+          "false": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5061,
+                "input": "false trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -720,
+          512
+        ]
+      },
+      "5059": {
+        "id": 5059,
+        "data": {
+          "_var": true,
+          "name": "true",
+          "isPublic": false,
+          "socketKey": null
+        },
+        "name": "Boolean Variable",
+        "inputs": {},
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5061,
+                "input": "true data"
+              }
+            ]
+          }
+        },
+        "position": [
+          -720,
+          896
+        ]
+      },
+      "5060": {
+        "id": 5060,
+        "data": {
+          "_var": false,
+          "name": "false",
+          "isPublic": false,
+          "socketKey": null
+        },
+        "name": "Boolean Variable",
+        "inputs": {},
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5061,
+                "input": "false data"
+              }
+            ]
+          }
+        },
+        "position": [
+          -720,
+          1040
+        ]
+      },
+      "5061": {
+        "id": 5061,
+        "data": {
+          "inputs": [
+            {
+              "name": "true trigger",
+              "taskType": "option",
+              "socketKey": "true trigger",
+              "socketType": "triggerSocket",
+              "connectionType": "input"
+            },
+            {
+              "name": "true data",
+              "taskType": "output",
+              "socketKey": "true data",
+              "socketType": "anySocket",
+              "connectionType": "input"
+            },
+            {
+              "name": "false trigger",
+              "taskType": "option",
+              "socketKey": "false trigger",
+              "socketType": "triggerSocket",
+              "connectionType": "input"
+            },
+            {
+              "name": "false data",
+              "taskType": "output",
+              "socketKey": "false data",
+              "socketType": "anySocket",
+              "connectionType": "input"
+            }
+          ]
+        },
+        "name": "Exclusive Gate",
+        "inputs": {
+          "true data": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5059,
+                "output": "output"
+              }
+            ]
+          },
+          "false data": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5060,
+                "output": "output"
+              }
+            ]
+          },
+          "true trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5056,
+                "output": "true"
+              }
+            ]
+          },
+          "false trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5056,
+                "output": "false"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5054,
+                "output": "true"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5062,
+                "input": "input"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5062,
+                "input": "trigger"
+              }
+            ]
+          }
+        },
+        "position": [
+          -416,
+          576
+        ]
+      },
+      "5062": {
+        "id": 5062,
+        "data": {
+          "name": "Output - Default",
+          "isOutput": true,
+          "socketKey": "f9906726-14b7-4a05-be3d-712a0a4cdaad",
+          "outputType": "Default",
+          "sendToPlaytest": true
+        },
+        "name": "Output",
+        "inputs": {
+          "event": {
+            "connections": []
+          },
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5061,
+                "output": "output"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 5061,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "output": {
+            "connections": []
+          },
+          "trigger": {
+            "connections": []
+          }
+        },
+        "position": [
+          -112,
+          592
+        ]
+      }
+    },
+    "comments": []
+  }
+}

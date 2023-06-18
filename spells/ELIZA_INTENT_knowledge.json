@@ -1,10 +1,10 @@
 {
-  "id": "a1f0c477-99ae-4744-b15e-60dc6dd354f7",
+  "id": "488295c1-b897-4727-8913-90713bffa1ce",
   "name": "ELIZA_INTENT_knowledge",
   "projectId": "bb1b3d24-84e0-424e-b4f1-57603f307a89",
-  "hash": "ea4c7def39886abc0c3715928120dbef",
-  "createdAt": "1684282832355",
-  "updatedAt": "1684286444101",
+  "hash": "623569537e062682995a1e73cfa8c770",
+  "createdAt": "1686210970868",
+  "updatedAt": null,
   "graph": {
     "id": "demo@0.1.0",
     "nodes": {
@@ -69,6 +69,20 @@
                 },
                 "node": 3672,
                 "input": "event"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 4895,
+                "input": "event"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 233,
+                "input": "event"
               }
             ]
           },
@@ -106,7 +120,15 @@
         "name": "Output",
         "inputs": {
           "event": {
-            "connections": []
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 232,
+                "output": "output"
+              }
+            ]
           },
           "input": {
             "connections": [
@@ -140,8 +162,8 @@
           }
         },
         "position": [
-          912,
-          -224
+          1008,
+          -64
         ]
       },
       "494": {
@@ -323,6 +345,13 @@
                 },
                 "node": 233,
                 "input": "input"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 4895,
+                "input": "input"
               }
             ]
           },
@@ -333,6 +362,13 @@
                   "hello": "hello"
                 },
                 "node": 233,
+                "input": "trigger"
+              },
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 4895,
                 "input": "trigger"
               }
             ]
@@ -353,6 +389,9 @@
         },
         "name": "Event Recall",
         "inputs": {
+          "type": {
+            "connections": []
+          },
           "event": {
             "connections": [
               {
@@ -418,6 +457,9 @@
         },
         "name": "Event Recall",
         "inputs": {
+          "type": {
+            "connections": []
+          },
           "event": {
             "connections": [
               {
@@ -619,6 +661,58 @@
         "position": [
           320,
           -288
+        ]
+      },
+      "4895": {
+        "id": 4895,
+        "data": {
+          "socketKey": "05c886d5-3d6b-4151-b9dd-643fc8cc2b9f",
+          "sendToPlaytest": true
+        },
+        "name": "Respond",
+        "inputs": {
+          "event": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 232,
+                "output": "output"
+              }
+            ]
+          },
+          "input": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3670,
+                "output": "result"
+              }
+            ]
+          },
+          "trigger": {
+            "connections": [
+              {
+                "data": {
+                  "hello": "hello"
+                },
+                "node": 3670,
+                "output": "trigger"
+              }
+            ]
+          }
+        },
+        "outputs": {
+          "trigger": {
+            "connections": []
+          }
+        },
+        "position": [
+          1008,
+          -304
         ]
       }
     },
